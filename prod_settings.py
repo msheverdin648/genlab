@@ -9,7 +9,7 @@ SECRET_KEY = '$1283u@*$2d1+%n^_c7o321@!$51_"&uuygzj^pyawdlo120e-12g-)_e!hni^ovfu
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', '49.12.75.213', 'www.healthyfood.uz', 'healthyfood.uz']
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 DATABASES = {
