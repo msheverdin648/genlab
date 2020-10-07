@@ -1,0 +1,16 @@
+.sidebar {
+  max-width: 320px;
+}
+
+.sidebar__container {
+  max-width: 260px;
+  margin: 0 auto;
+}
+
+.sidebar__nav__item {
+  padding: 17px 0;
+}
+
+.sidebar__contacts {
+  background-color: #BB669B;
+}
