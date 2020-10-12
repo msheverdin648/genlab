@@ -1,5 +1,121 @@
 .sidebar {
+  position: relative;
   max-width: 320px;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
+  top: 0;
+  left: 0;
+  padding: 0 30px;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.sidebar.active {
+  text-align: center;
+  padding: 15px;
+}
+
+.sidebar.active .sidebar__container {
+  max-width: 100%;
+  margin: 0;
+}
+
+.sidebar.active .sidebar__logo {
+  background: url("../../img/small-logo.svg");
+  width: 66px;
+  height: 64px;
+}
+
+.sidebar.active .sidebar__logo img {
+  opacity: 0;
+  display: none;
+}
+
+.sidebar.active .sidebar__nav__item::before {
+  left: -23%;
+}
+
+.sidebar.active .sidebar__nav__item__text {
+  opacity: 0;
+  display: none;
+}
+
+.sidebar.active .sidebar__open i {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.sidebar.active .sidebar__search__text {
+  display: none;
+}
+
+.sidebar.active .sidebar__search__input__item {
+  display: none;
+}
+
+.sidebar.active .sidebar__search__input__button {
+  background: #fff;
+  color: #000000;
+  border: none;
+  padding: 0;
+  margin-top: 72px;
+}
+
+.sidebar.active .sidebar__contacts {
+  position: relative;
+  top: 15px;
+  left: 0;
+  margin: 0 -15px;
+  padding: 99.5px 0;
+}
+
+.sidebar.active .sidebar__contacts__full {
+  display: none;
+}
+
+.sidebar.active .sidebar__contacts__small {
+  display: block;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.sidebar.active .sidebar__contacts__small__text {
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 16px;
+}
+
+.sidebar__open {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  right: 0;
+  top: 45%;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
+  border-radius: 0px 16px 16px 0px;
+  width: 9px;
+  height: 70px;
+  z-index: 20;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.sidebar__open i {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.sidebar__open:hover {
+  cursor: pointer;
 }
 
 .sidebar__container {
@@ -7,10 +123,106 @@
   margin: 0 auto;
 }
 
+.sidebar__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 19px;
+}
+
 .sidebar__nav__item {
-  padding: 17px 0;
+  color: #383838;
+  padding: 16.5px 0;
+  position: relative;
+}
+
+.sidebar__nav__item i {
+  margin-right: 11px;
+}
+
+.sidebar__nav__item.active a {
+  color: #BB669B;
+}
+
+.sidebar__nav__item.active i {
+  margin-right: 18px;
+}
+
+.sidebar__nav__item.active::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background: #BB669B;
+  height: 26px;
+  width: 5px;
+  top: 25%;
+  left: -12%;
+}
+
+.sidebar__search__text {
+  margin-bottom: 8px;
+  color: #414141;
+  font-size: 15px;
+}
+
+.sidebar__search__input {
+  margin-bottom: 26px;
+}
+
+.sidebar__search__input__item {
+  border: 1px solid #E0E0E0;
+  padding: 13px 70px 12px 15px;
+}
+
+.sidebar__search__input__button {
+  background: #BB669B;
+  color: #ffffff;
+  padding: 13px;
+  border: 1px solid #BB669B;
+  font-size: 15px;
+}
+
+.sidebar__search__input__button {
+  display: inline-block;
 }
 
 .sidebar__contacts {
   background-color: #BB669B;
+  color: #ffffff;
+  padding: 28px 0;
+  margin: 0 -30px;
+}
+
+.sidebar__contacts__text {
+  margin-bottom: 11px;
+  font-size: 13px;
+}
+
+.sidebar__contacts__phone {
+  margin-bottom: 7px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.sidebar__contacts__email {
+  margin-bottom: 23px;
+}
+
+.sidebar__contacts__address {
+  font-size: 14px;
+  line-height: 18.9px;
+  max-width: 190px;
+}
+
+.sidebar__contacts__small {
+  display: none;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }

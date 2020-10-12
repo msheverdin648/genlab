@@ -1,0 +1,60 @@
+{% load static %}
+
+
+<div class="sidebar">
+    <span class="sidebar__open"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+    <div class="sidebar__container">
+        <div class="sidebar__logo"><img src="{% static 'img/sidebar-logo.svg' %}" alt=""></div>
+        <ul class="sidebar__nav">
+            <li class="sidebar__nav__item active">
+                
+                <a href="#"><i class="fa fa-home" aria-hidden="true"></i><span class="sidebar__nav__item__text">Главная</span></a></li>
+            <li class="sidebar__nav__item">
+                
+                <a href="#"><i class="fas fa-microscope"></i><span class="sidebar__nav__item__text">Исследования</span></a></li>
+            <li class="sidebar__nav__item">
+                
+                <a href="#"><i class="fas fa-flask"></i><span class="sidebar__nav__item__text">Как сдать анализы</span></a></li>
+            <li class="sidebar__nav__item">
+                
+                <a href="#"><i class="fa fa-info-circle" aria-hidden="true"></i><span class="sidebar__nav__item__text">О нас</span></a></li>
+            <li class="sidebar__nav__item">
+                
+                <a href="#"><i class="fa fa-handshake-o" aria-hidden="false"></i><span class="sidebar__nav__item__text">Сотрудничество</span></a></li>
+            <li class="sidebar__nav__item">
+                
+                <a href="#"><i class="fa fa-pencil" aria-hidden="true"></i><span class="sidebar__nav__item__text">Контакты</span></a></li>
+            <li class="sidebar__nav__item">
+                
+                <a href="#"><i class="fa fa-user" aria-hidden="true"></i><span class="sidebar__nav__item__text">Личный кабинет</span></a></li>
+        </ul>
+        <div class="sidebar__search">
+            <p class="sidebar__search__text">Поиск по сайту:</p>
+            <div class="sidebar__search__input">
+                <input type="text" class="sidebar__search__input__item" placeholder="Что интересует?"><button class="sidebar__search__input__button">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar__contacts">
+        <div class="sidebar__container">
+            <div class="sidebar__contacts__full">
+                <p class="sidebar__contacts__text">Наши контакты:</p>
+                <h3 class="sidebar__contacts__phone">+998 001 001 001</h3>
+                <p class="sidebar__contacts__email">info@1glab.com</p>
+                <p class="sidebar__contacts__text">Адрес лаборатории:</p>
+                <p class="sidebar__contacts__address">
+                    Узбекистан, г.Ташкент,
+                    ул. Восточная 43, офис №11
+                </p>
+            </div>
+            
+        </div>
+        <div class="sidebar__contacts__small">
+            <h2 class="sidebar__contacts__small__text">
+                Контакты
+            </h2>
+        </div>
+    </div>
+</div>
