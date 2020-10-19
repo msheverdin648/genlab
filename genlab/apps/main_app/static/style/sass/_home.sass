@@ -1,0 +1,424 @@
+@mixin header_style
+    +vol_bold
+    font-size: 25px
+    line-height: 29.45px
+    color: #252525
+
+@mixin buttons
+    padding: 16px 50px
+    color: #ffffff
+    background: $pink
+    +u_bold
+    &:visited,
+    &:active,
+    &:hover
+        color: #ffffff
+    
+@mixin links
+    position: relative
+    +u_medium
+    color: $pink
+    font-size: 14px
+    line-height: 19px
+    text-decoration-line: underline
+    padding: 0 0 0 30px
+    &:visited,
+    &:active,
+    &:hover
+        color: $pink
+    &::before
+        content: ""
+        position: absolute
+        top: 0
+        left: 0
+        width: 20px 
+        height: 100%
+        background: url('../../img/next-arrow.svg') center no-repeat 
+    
+        
+        
+    
+.search 
+    color: #ffffff
+    background: url('../../img/search-bg.png') center no-repeat
+    background-size: cover
+    padding: 38px 0
+    &__header 
+        +header_style
+        color: #ffffff
+    &__text 
+        +u_normal
+        font-size: 14px
+        line-height: 16px
+        margin-bottom: 16px
+    &__item 
+        display: flex
+        position: relative
+        &::before
+                content: ""
+                position: absolute
+                width: 30px
+                height: 100%
+                top: 0
+                left: 0
+                background: url('../../img/lens.svg') center no-repeat
+                z-index: 10
+                transform: translateX(50%)
+        &__input 
+            position: relative
+            padding: 20px 0 20px 60px
+            background: #D785B8
+            flex: 1 1 auto
+            color: #ffffff
+            +u_light
+            
+        &__button 
+            padding: 18px 29px
+            background: $pink
+            color: #ffffff
+            border: 2px solid #FFFFFF
+            +u_bold
+    &__description 
+        font-size: 12px
+        +u_light
+        margin-top: 8px
+        line-height: 14px
+
+
+
+.researches 
+    padding: 56px 0
+    &__header 
+        +header_style
+        max-width: 50%
+        margin-bottom: 40px
+
+    &__items 
+        display: flex
+        flex-wrap: wrap
+        &__item 
+            flex: 0 1 31.33%
+            padding: 65px 35px 56px 35px
+            
+
+        .research 
+            position: relative
+            border: 10px solid #ECECEC
+            margin-right: 16px
+            margin-bottom: 35px
+            &:last-child
+                margin-right: 0
+            &__header 
+                +header_style
+                margin-bottom: 20px
+            &__underline
+                border: 1px solid #ECECEC
+                height: 1px
+                width: 100%
+            &__name
+                display: block
+                margin: 10px 0 12px 0
+                +u_normal
+                font-size: 14px
+                line-height: 17px
+                color: $pink
+                &:hover
+                    text-decoration: underline
+            &.active
+                border: 10px solid  $pink
+                &::before
+                    background: url('../../img/gene-active.svg') center no-repeat, #ffffff
+
+            &::before
+                content: ""
+                position: absolute
+                top: 0
+                left: 0
+                width: 85px
+                height: 80px
+                background-size: contain
+                padding: 10px
+                z-index: 10
+                transform: translate(50%, -50%)
+            &:nth-child(1)
+                &::before
+                    background: url('../../img/gene.svg') center no-repeat, #ffffff
+                &.active
+                    &::before
+                        background: url('../../img/gene-active.svg') center no-repeat, #ffffff
+            &:nth-child(2)
+                &::before
+                    background: url('../../img/lense.svg') center no-repeat, #ffffff
+                &.active
+                    &::before
+                        background: url('../../img/lense-active.svg') center no-repeat, #ffffff
+            &:nth-child(3)
+                &::before
+                    background: url('../../img/pregnant.svg') center no-repeat, #ffffff
+                &.active
+                    &::before
+                        background: url('../../img/pregnant-active.svg') center no-repeat, #ffffff
+                        
+            &:nth-child(4)
+                &::before
+                    background: url('../../img/dna.svg') center no-repeat, #ffffff
+                &.active
+                    &::before
+                        background: url('../../img/dna-active.svg') center no-repeat, #ffffff
+            &:nth-child(5)
+                &::before
+                    background: url('../../img/chemistry.svg') center no-repeat, #ffffff
+                &.active
+                    &::before
+                        background: url('../../img/chemistry-active.svg') center no-repeat, #ffffff
+                        
+            &:nth-child(6)
+                &::before
+                    background: url('../../img/virus.svg') center no-repeat, #ffffff
+                &.active
+                    &::before
+                        background: url('../../img/virus-active.svg') center no-repeat, #ffffff
+                        
+                
+                
+
+.questions
+    padding: 0 0 84px 0
+    &__header
+        +header_style
+        margin-bottom: 24px
+    .list
+        counter-reset: li
+        list-style: none
+        &__item
+            padding: 30px 0px 30px 0px
+            border-top: 1px solid #ECECEC
+            border-bottom: 1px solid #ECECEC
+            transition: all 0.3s ease 0s
+            &:hover
+                cursor: pointer
+            &.active
+                background: $pink
+                border-top: 1px solid $pink
+                border-bottom: 1px solid $pink
+            
+            &__question
+                padding-left: 80px
+                position: relative
+                margin-bottom: 18px
+                +u_medium
+                font-size: 16px
+                line-height: 18.85px
+                display: flex
+                justify-content: space-between
+                &.active
+                    color: #ffffff
+                    &::before
+                        color: #F6BDE1
+                &::before
+                    content: "0"counter(li)
+                    counter-increment: li
+                    position: absolute
+                    color: #EFEFEF
+                    font-size: 37px
+                    +u_bold
+                    top: 0
+                    left: 0
+                    transform: translateX(50%)
+                &__button
+                    position: relative
+                    font-size: 14px
+                    +u_medium
+                    color: $pink
+                    margin: 0 0 0 55px
+                    padding: 0 40px 0 0
+                    &:hover
+                        cursor: pointer
+                    &::after
+                        display: block
+                        position: absolute
+                        right: 0
+                        top: 0
+                        content: ""
+                        width: 10px
+                        height: 20px
+                        background: url('../../img/arrow-down.svg') center no-repeat
+                        transform: translateX(-150%)
+                    &.active
+                        color: #F6BDE1
+                        &::after
+                            background: url('../../img/arrow-up.svg') center no-repeat
+            &__answer
+                padding-left: 80px
+                max-width: 80%
+                &_text
+                    color: #ffffff
+                    +u_normal
+                    font-size: 14px
+                    line-height: 19.71px
+                &_header
+                    color: #F6BDE1
+                    +u_bold
+                    font-size: 14px
+                    line-height: 19.71px
+                    margin-bottom: 10px
+    &__row
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-top: 45px
+        &__button
+            +buttons
+            font-size: 15px
+
+        &__link
+            +links
+
+.how
+    background: url('../../img/how-bg.png')
+    background-repeat: no-repeat
+    background-position: center
+    padding: 64px 0 72px 0
+    text-align: center
+    &__title
+        +vol_bold
+        font-size: 45px
+        line-height: 53.01px
+        color: #ffffff
+        margin-bottom: 61px
+    &__subtitle
+        +u_medium
+        font-size: 18px
+        line-height: 21.2px
+        color: #ffffff
+    &__track
+        background: url('../../img/line.svg') center no-repeat
+        background-position: 90% 100%
+        &__button
+            +buttons
+    .track
+        position: relative
+        &__row
+            display: flex
+        .row
+            margin-bottom:  45px
+            &__item
+                margin-right: 83px
+                &:first-child
+                    margin-left: 65px
+                
+                &__ico
+                    display: flex
+                    justify-content: center
+                    img
+                        padding: 28px
+                        background: $pink
+                        border-radius: 100%
+                        display: block
+                        position: relative
+                &__header
+                    +u_bold
+                    font-size: 20px
+                    color: #ffffff
+                    line-height: 23.56px
+                    margin: 12px 0 5px 0
+                    text-transform: uppercase
+                &__description
+                    +u_normal
+                    font-size: 16px
+                    line-height: 22.45px
+                    color: #ffffff
+                    a
+                        +links
+                        padding: 0
+                        &::before
+                            display: none
+                            
+            &:nth-child(1)
+                margin-top: 61px
+                margin-bottom: 75px
+            &:nth-child(2)
+                margin-bottom: 75px
+                .row__item
+                    &:first-child
+                        margin: 0
+                        max-width: 228px
+                        margin-right: 60px
+                        margin-left: 230px
+                    &:last-child
+                        max-width: 315px
+
+.news
+    padding: 62px 0 80px 0
+    &__header
+        +header_style
+        margin-bottom: 33px
+    &__slider
+    .slider
+        &__item
+            max-width: 50%
+            margin-right: 24px
+        .slide
+            &__content
+                display: flex
+                flex-direction: column
+                &__image
+                    width: 100%
+                    height: 260px
+                    position: relative
+                    z-index: 9
+                    img
+                        
+                &__text
+                    position: relative
+                    padding: 22px 29px
+                    max-width: 95%
+                    margin: 0 auto
+                    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05)
+                    z-index: 10
+                    transform: translateY(-10%)
+                    background: #fff
+                    &__header
+                        +vol_bold
+                        font-size: 16px
+                        line-height: 22.4px
+                        color: #252525
+                        margin-bottom: 12px
+                    &__description
+                        color: #848484
+                        +u_normal
+                        font-size: 14px
+                        line-height: 19.6px
+                        margin-bottom: 20px
+                    &__more
+                        display: flex
+                        justify-content: space-between
+                        align-items: center
+                        &__button
+                            +buttons
+                            padding: 10px 20px
+                            font-size: 13px
+                            +u_medium
+                        &__date
+                            position: relative
+                            +u_normal
+                            font-size: 13px
+                            color: #848484
+                            line-height: 19.4px
+                            padding-left: 22px
+                            &::before
+                                content: ""
+                                position: absolute
+                                display: block
+                                left: 0
+                                transform: translateY(10%)
+                                width: 15px
+                                height: 15px
+                                background: url('../../img/calendar.svg') center no-repeat
+    &__button
+        text-align: center
+        margin-top: 113px
+        &__link
+            +buttons
+            font-size: 15px
+

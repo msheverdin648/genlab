@@ -1,0 +1,307 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+  
+    <div class="search">
+        <div class="container">
+            <h2 class="search__header">Интересует конкретная услуга?</h2>
+            <p class="search__text">Введите ее название в строку поиска, чтобы найти нужное исследование</p>
+            <div class="search__item">
+                <input type="text" placeholder="Поиск исследования" class="search__item__input">
+                <button class="search__item__button">
+                    Найти исследование
+                </button>
+            </div>
+            <p class="search__description">Например: ПГТ хромосомных анеуплоидий</p>
+        </div>
+    </div>
+
+    <!--Блок с исследованиями-->
+
+    <div class="researches">
+        <div class="container">
+            <h2 class="researches__header">Основные направления исследований лаборатории</h2>
+            <div class="researches__items">
+                <div class="researches__items__item research">
+                    <h3 class="research__header">Пре­им­план­та­ци­он­ное ге­не­ти­че­ское те­сти­ро­ва­ние</h3>
+                    <hr class="research__underline">
+                    <a href="#" class="research__name">ПГТ хромосомных анеуплоидий</a>
+                    <hr class="research__underline">
+                    <a href="#" class="research__name">ПГТ хромосомных перестроек</a>
+                    <hr class="research__underline">
+                    <a href="#" class="research__name">ПГТ моногенных заболеваний</a>
+                    <hr class="research__underline">
+                    <a href="#" class="research__name">ПГТ резус-фактора эмбрионов</a>
+                    <hr class="research__underline">
+                </div>
+                <div class="researches__items__item research">
+                    <h3 class="research__header">Бесплодие. Диагностика и рекомендации</h3>
+                    <hr class="research__underline">
+                    <a href="#" class="research__name">Какие исследования провести, если не наступает беременность</a>
+                    <hr class="research__underline">
+                    <a href="#" class="research__name">Подготовка к беременности</a>
+                    <hr class="research__underline">
+                    <a href="#" class="research__name">Невынашивание беременности</a>
+                    <hr class="research__underline">
+                </div>
+                <div class="researches__items__item research">
+                    <h3 class="research__header">Беременность и сопровождение на всех этапах</h3>
+                    <hr class="research__underline">
+                    <a href="#" class="research__name">Неинвазивное пренатальное тестирование</a>
+                    <hr class="research__underline">
+                    <a href="#" class="research__name">Пренатальная диагностика</a>
+                    <hr class="research__underline">
+                </div>
+                <div class="researches__items__item research">
+                    <h3 class="research__header">Генети­ческие
+                        исследова­ния Lifestyle</h3>
+                    <hr class="research__underline">
+                    <a href="#" class="research__name">Спортивная генетика</a>
+                    <hr class="research__underline">
+                    <a href="#" class="research__name">Эстетическая генетика</a>
+                    <hr class="research__underline">
+                    <a href="#" class="research__name">Нутригенетика</a>
+                    <hr class="research__underline">
+                    <a href="#" class="research__name">Этническое происхождение</a>
+                    <hr class="research__underline">
+                </div>
+                <div class="researches__items__item research">
+                    <h3 class="research__header">Профи­лактика заболеваний</h3>
+                    <hr class="research__underline">
+                    <a href="#" class="research__name">Моногенные заболевания</a>
+                    <hr class="research__underline">
+                    <a href="#" class="research__name">Клинический экзом</a>
+                    <hr class="research__underline">
+                    <a href="#" class="research__name">Соматические заболевания</a>
+                    <hr class="research__underline">
+                    <a href="#" class="research__name">Фармакогенетика</a>
+                    <hr class="research__underline">
+                </div>
+                <div class="researches__items__item research">
+                    <h3 class="research__header">Онко­логия - диагностика, профилактика и рекомендации</h3>
+                    <hr class="research__underline">
+                    <a href="#" class="research__name">Диагностика наследственных онкологических синдромов</a>
+                    <hr class="research__underline">
+                    <a href="#" class="research__name">Генетическое типирование опухоли</a>
+                    <hr class="research__underline">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Конец блока-->
+
+    <!--Блок с часто-задаваемыми вопрсами-->
+    <div class="questions">
+        <div class="container">
+            <h2 class="questions__header">Ответы на часто задаваемые вопросы</h2>
+            <ol class="questions__list list">
+                <li class="list__item active">
+                    <h3 class="list__item__question active">
+                        Какие исследования провести, если не наступает беременность?
+                        <span class="list__item__question__button active">Подробнее</span>
+                    </h3>
+                    <div class="list__item__answer">
+                        <p class="list__item__answer_header">
+                            Ответ:
+                        </p>
+                        <p class="list__item__answer_text">
+                            Добрый день! В данной ситуации мы рекомендуем провести диагностику хромосомной патологии при неразвивающейся беременности методом хромосомно-микроматричного анализа. В нашей лаборатории данное исследование называется «КРЕДО». Срок проведения исследования 14 рабочих дней. По результатам исследования Вы сможете получить бесплатную консультацию врача-генетика в нашем центре.
+                        </p>
+                    </div>
+                </li>
+                <li class="list__item">
+                    <h3 class="list__item__question">
+                        У супруги неразвивающаяся (замершая) беременность, предстоит выскабливание. Прочитал что необходимо провести исследование (ХМА, цитогенетическое). Когда и как это можно сделать?
+                        <span class="list__item__question__button">Подробнее</span>
+                    </h3>
+                    <div class="list__item__answer hide">
+                        <p class="list__item__answer_header">
+                            Ответ:
+                        </p>
+                        <p class="list__item__answer_text">
+                            Добрый день! В данной ситуации мы рекомендуем провести диагностику хромосомной патологии при неразвивающейся беременности методом хромосомно-микроматричного анализа. В нашей лаборатории данное исследование называется «КРЕДО». Срок проведения исследования 14 рабочих дней. По результатам исследования Вы сможете получить бесплатную консультацию врача-генетика в нашем центре.
+                        </p>
+                    </div>
+                </li>
+                <li class="list__item">
+                    <h3 class="list__item__question">
+                        Можно ли исправить генетику эмбрионов?
+                        <span class="list__item__question__button">Подробнее</span>
+                    </h3>
+                    <div class="list__item__answer hide">
+                        <p class="list__item__answer_header">
+                            Ответ:
+                        </p>
+                        <p class="list__item__answer_text">
+                            Добрый день! В данной ситуации мы рекомендуем провести диагностику хромосомной патологии при неразвивающейся беременности методом хромосомно-микроматричного анализа. В нашей лаборатории данное исследование называется «КРЕДО». Срок проведения исследования 14 рабочих дней. По результатам исследования Вы сможете получить бесплатную консультацию врача-генетика в нашем центре.
+                        </p>
+                    </div>
+                </li>
+                <li class="list__item">
+                    <h3 class="list__item__question">
+                        Как подготовиться к проведению анализов на генетику?
+                        <span class="list__item__question__button">Подробнее</span>
+                    </h3>
+                    <div class="list__item__answer hide">
+                        <p class="list__item__answer_header">
+                            Ответ:
+                        </p>
+                        <p class="list__item__answer_text">
+                            Добрый день! В данной ситуации мы рекомендуем провести диагностику хромосомной патологии при неразвивающейся беременности методом хромосомно-микроматричного анализа. В нашей лаборатории данное исследование называется «КРЕДО». Срок проведения исследования 14 рабочих дней. По результатам исследования Вы сможете получить бесплатную консультацию врача-генетика в нашем центре.
+                        </p>
+                    </div>
+                </li>
+                <li class="list__item">
+                    <h3 class="list__item__question">
+                        Неинвазивное пренатальное тестирование. С чего начать?
+                        <span class="list__item__question__button">Подробнее</span>
+                    </h3>
+                    <div class="list__item__answer hide">
+                        <p class="list__item__answer_header">
+                            Ответ:
+                        </p>
+                        <p class="list__item__answer_text">
+                            Добрый день! В данной ситуации мы рекомендуем провести диагностику хромосомной патологии при неразвивающейся беременности методом хромосомно-микроматричного анализа. В нашей лаборатории данное исследование называется «КРЕДО». Срок проведения исследования 14 рабочих дней. По результатам исследования Вы сможете получить бесплатную консультацию врача-генетика в нашем центре.
+                        </p>
+                    </div>
+                </li>
+            </ol>
+            <div class="questions__row">
+                <a href="#" class="questions__row__button">Задать свой вопрос</a>
+                <a href="#" class="questions__row__link">Читать другие ответы на вопросы</a>
+            </div>
+        </div>
+    </div>
+    <!--Конец блока-->
+
+    <!--Блок как сдается анализ-->
+    <div class="how">
+        <div class="container">
+            <h3 class="how__subtitle">Как сдается анализ</h3>
+            <h2 class="how__title">5 простых шагов</h2>
+            <div class="how__track track">
+                <div class="track__row row">
+                    <div class="row__item">
+                        <div class="row__item__ico"><img src="{% static 'img/pin.svg' %}" alt=""></div>
+                        <h4 class="row__item__header">Первый шаг</h4>
+                        <p class="row__item__description">Найти <a href="">адрес лаборатории</a>
+                            на нашем сайте</p>
+                    </div>
+                    <div class="row__item">
+                        <div class="row__item__ico"><img src="{% static 'img/lab.svg' %}" alt=""></div>
+                        <h4 class="row__item__header">Второй шаг</h4>
+                        <p class="row__item__description">Сдать анализы в
+                            нашей лаборатории</p>
+                    </div>
+                    <div class="row__item">
+                        <div class="row__item__ico"><img src="{% static 'img/time.svg' %}" alt=""></div>
+                        <h4 class="row__item__header">третий шаг</h4>
+                        <p class="row__item__description">Ожидать результата
+                            анализа из лаборатории</p>
+                    </div>
+                </div>
+                <div class="track__row row">
+                    <div class="row__item">
+                        <div class="row__item__ico"><img src="{% static 'img/conversation.svg' %}" alt=""></div>
+                        <h4 class="row__item__header">пятый шаг</h4>
+                        <p class="row__item__description">Записаться на консультацию
+                            по результатам исследования</p>
+                    </div>
+                    <div class="row__item">
+                        <div class="row__item__ico"><img src="{% static 'img/plan.svg' %}" alt=""></div>
+                        <h4 class="row__item__header">четвертый шаг</h4>
+                        <p class="row__item__description">Получить письмо с результатом анализа
+                            на email. Если информация не поступила,
+                            свяжитесь с <a href="">клиникой в Москве</a></p>
+                    </div>
+                </div>
+                <a href="" class="how__track__button">Заявка на анализ</a>
+            </div>
+        </div>
+    </div>
+    <!--Конец блока-->
+    <!--Начало блока с новостями-->
+    <div class="news">
+        <div class="container">
+            <h2 class="news__header">
+                Новости нашей лаборатории
+            </h2>
+            <!--Слайдер-->
+            <div class="news__slider slider">
+                <div class="slider__item slide">
+                    <div class="slide__content">
+                        <div class="slide__content__image ibg"><img src="{% static 'img/news-slide_1.png' %}" alt=""></div>
+                        <div class="slide__content__text">
+                            <h3 class="slide__content__text__header"> Самые современные методы анализа материала ДНК уже в Узбекистане</h3>
+                            <p class="slide__content__text__description">Возможно, вы уже прошли дорогостоящие длительные дополнительные медицинские обследования, но так и не получили ответ на ваш вопрос. Возможно, вы в настоящий момент готовитесь к выскабливанию. В любом случае, мы готовы помочь вам и вашему врачу в решении проблемы.</p>
+                            <div class="slide__content__text__more">
+                                <button class="slide__content__text__more__button">Читать подробнее</button>
+                                <span class="slide__content__text__more__date">10 января 2020</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider__item slide">
+                    <div class="slide__content">
+                        <div class="slide__content__image ibg"><img src="{% static 'img/news-slide_2.png' %}" alt=""></div>
+                        <div class="slide__content__text">
+                            <h3 class="slide__content__text__header">Большое обновление спектра услуг.
+                                Что нового в этом году?</h3>
+                            <p class="slide__content__text__description">К сожалению, не всегда супружеская пара, столкнувшаяся с необъяснимой причиной прервавшейся беременности, оказывается в кабинете генетика, чтобы получить профессиональную «направляющую» в последующем обследовании и попытаться установить эти причины.</p>
+                            <div class="slide__content__text__more">
+                                <button class="slide__content__text__more__button">Читать подробнее</button>
+                                <span class="slide__content__text__more__date">8 января 2020</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider__item slide">
+                    <div class="slide__content">
+                        <div class="slide__content__image ibg"><img src="{% static 'img/news-slide_1.png' %}" alt=""></div>
+                        <div class="slide__content__text">
+                            <h3 class="slide__content__text__header"> Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.</h3>
+                            <p class="slide__content__text__description">Далеко-далеко за словесными горами в стране гласных и согласных живут, рыбные тексты. Курсивных, страна точках жизни обеспечивает океана о щеке страну лучше предложения не всемогущая наш себя имени, однажды семь образ составитель.</p>
+                            <div class="slide__content__text__more">
+                                <button class="slide__content__text__more__button">Читать подробнее</button>
+                                <span class="slide__content__text__more__date">10 января 2020</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider__item slide">
+                    <div class="slide__content">
+                        <div class="slide__content__image ibg"><img src="{% static 'img/news-slide_2.png' %}" alt=""></div>
+                        <div class="slide__content__text">
+                            <h3 class="slide__content__text__header">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, quibusdam?</h3>
+                            <p class="slide__content__text__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, fugit nulla. Ullam, assumenda modi officiis velit eaque ipsa animi eum et obcaecati error, reiciendis itaque similique est, iste sint illum.</p>
+                            <div class="slide__content__text__more">
+                                <button class="slide__content__text__more__button">Читать подробнее</button>
+                                <span class="slide__content__text__more__date">8 января 2020</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider__item slide">
+                    <div class="slide__content">
+                        <div class="slide__content__image ibg"><img src="{% static 'img/news-slide_2.png' %}" alt=""></div>
+                        <div class="slide__content__text">
+                            <h3 class="slide__content__text__header">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, quibusdam?</h3>
+                            <p class="slide__content__text__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, fugit nulla. Ullam, assumenda modi officiis velit eaque ipsa animi eum et obcaecati error, reiciendis itaque similique est, iste sint illum.</p>
+                            <div class="slide__content__text__more">
+                                <button class="slide__content__text__more__button">Читать подробнее</button>
+                                <span class="slide__content__text__more__date">8 января 2020</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Конец слайдера-->
+            <div class="news__button">
+                <a href="" class="news__button__link">Читать все публикации</a>
+            </div>
+        </div>
+    </div>
+    <!--Конец блока-->
+{% endblock %}

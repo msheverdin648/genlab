@@ -1,0 +1,155 @@
+@import 'color'
+    
+.sidebar
+    position: relative
+    max-width: 320px
+    background: #FFFFFF
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08)
+    top: 0
+    left: 0
+    padding: 0 30px
+
+    &.active
+        text-align: center
+        padding: 15px
+        .sidebar
+            &__container
+                max-width: 100%
+                margin: 0
+            &__logo
+                background: url('../../img/small-logo.svg')
+                width: 66px
+                height: 64px
+                img
+                    opacity: 0
+                    display: none
+            &__nav
+                &__item
+                    &::before
+                       left: -23% 
+                    &__text
+                        opacity: 0
+                        display: none
+
+            &__open
+                i
+                    transform: rotate(0deg)   
+            &__search
+                &__text
+                    display: none
+                &__input 
+                    &__item
+                        display: none 
+                    &__button
+                        background: #fff
+                        color: #000000
+                        border: none
+                        padding: 0
+                        margin-top: 72px
+            &__contacts
+                position: relative
+                top: 15px
+                left: 0
+                margin: 0 -15px
+                padding: 99.5px 0
+                &__full
+                    display: none
+                &__small
+                    display: block
+                    transform: rotate(-90deg)
+                    &__text
+                        font-size: 14px
+                        font-weight: 500
+                        text-transform: uppercase
+                        text-align: center
+                        line-height: 16px
+
+        
+    
+    &__open
+        display: flex
+        align-items: center
+        position: absolute
+        right: 0
+        top: 385px
+        background: #FFFFFF
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08)
+        border-radius: 0px 16px 16px 0px
+        width: 9px 
+        height: 70px
+        z-index: 20
+        transform: translateX(100%)
+        i 
+            transform: rotate(180deg)
+        &:hover
+            cursor: pointer
+        &.active
+    &__container
+        max-width: 260px
+        margin: 0 auto
+    &__logo
+        display: flex
+        justify-content: center
+        margin-top: 19px
+    &__nav
+        &__item
+            color: #383838
+            padding: 16.5px 0 
+            position: relative
+            i
+                margin-right: 11px
+            &.active
+                a
+                    color: $pink
+                i
+                    margin-right: 18px
+
+                &::before
+                    content: ""
+                    display: block 
+                    position: absolute 
+                    background: $pink
+                    height: 26px
+                    width: 5px
+                    top: 25%
+                    left: -12%
+
+       
+    &__search
+        &__text
+            margin-bottom: 8px
+            color: #414141
+            font-size: 15px
+        &__input
+            margin-bottom: 26px
+            &__item
+                border: 1px solid #E0E0E0
+                padding: 13px 70px 12px 15px
+            &__button
+                background: $pink
+                color: #ffffff
+                padding: 13px
+                border: 1px solid $pink
+                font-size: 15px
+            &__button
+                display: inline-block
+    &__contacts
+        background-color: $pink
+        color: #ffffff
+        padding: 28px 0
+        margin: 0 -30px
+        &__text
+            margin-bottom: 11px
+            font-size: 13px
+        &__phone
+            margin-bottom: 7px
+            font-size: 20px
+            font-weight: 700
+        &__email
+            margin-bottom: 23px
+        &__address
+            font-size: 14px
+            line-height: 18.9px
+            max-width: 190px
+        &__small
+            display: none

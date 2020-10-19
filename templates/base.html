@@ -7,19 +7,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/dea8ebbfdb.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{% static 'style/css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'style/css/slick.css' %}">
     <link rel="stylesheet" href="{% static 'style/css/style.css' %}">
-    <title>Document</title>
+    <title>Genlab</title>
 </head>
 <body>
     
     <div class="wrapper">
         {% include "include/sidebar.html" %}
-        {% block content %}
-            <div class="page__content">asdqwdqwqdwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww</div>
-        {% endblock content %}
+        <div class="content">
+            {% include "include/header-slider.html" %}
+            {% block content %}
+              
+            {% endblock content %}
+        </div>
     </div>
 
     <script src="{% static 'scripts/jquery.js' %}"></script>
+    <script src="{% static 'scripts/ibg.js' %}"></script>
+    <script src="{% static 'scripts/slick.min.js' %}"></script>
     <script src="{% static 'scripts/script.js' %}"></script>
 </body>
 </html>
