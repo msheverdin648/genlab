@@ -20,15 +20,7 @@
                     display: flex
                     justify-content: space-between
                     align-items: center
-                    .num
-                        +vol_normal
-                        font-size: 27px
-                        line-height: 38px
-                        &__this
-                            color: $pink
-                            font-size: 27px
-                        &__all
-                            font-size: 23px
+
                     &__next
                         font-size: 12px
                         color: $pink
@@ -82,6 +74,17 @@
                         width: 20px 
                         height: 100%
                         background: url('../../img/next-arrow.svg') center no-repeat 
+
+
+.num
+    +vol_normal
+    font-size: 27px
+    line-height: 38px
+    &__this
+        color: $pink
+        font-size: 27px
+    &__all
+        font-size: 23px
                     
                         
 
@@ -90,9 +93,29 @@
     &-arrows
         position: absolute
         
+    &-dots
+        display: none !important
         
     &-track
     &-prev
+        position: absolute
+        top: 70px 
+        left: 0
+        background-color: transparent
+        color: $pink
+        text-decoration: underline
+        transform: translateY(70%)
+        padding-left: 50px
+        &::before
+            content: ""
+            position: absolute
+            top: 0
+            left: 0
+            width: 20px 
+            height: 100%
+            background: url('../../img/next-arrow.svg') center no-repeat 
+            transform: translateX(100%) rotate(180deg)
+
 
     &-next
         position: absolute

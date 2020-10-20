@@ -36,7 +36,19 @@ $(document).ready(function(){
     $('.news__slider').slick({
         slidesToShow: 2,
         slidesToScroll: 2,
+        appendArrows: $('.news__navigate'),
+        nextArrow: '<button class="slick-next slick-arrow" aria-label="Next" type="button" style="">Следующий слайд</button>',
+        prevArrow: '<button class="slick-prev slick-arrow" aria-label="Prev" type="button" style="">Предыдущий слайд</button>',
+        dots: true,
     })
+
+
+    $("#slider-nav-2 .num__all").text("0" + $("#slider-2 ul li").length)
+
+    $(".news__slider").on("afterChange", function(event, slick, currentSlide, nextSlide){
+        $("#slider-nav-2 .num__this").text('0' + $('li.slick-active').text());
+        console.log($('li.slick-active button').text())
+    });
 
 
 

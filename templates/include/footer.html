@@ -1,0 +1,47 @@
+{% load static %}
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer__row row">
+            <div class="row__column">
+                <h3 class="row__column__title">Оставьте email, чтобы быть в курсе последних новостей и событий компании:</h3>
+                <div class="row__column__send send">
+                    <input type="text" class="send__input" placeholder="example@mail.com">
+                    <button class="send__button"><img src="{% static 'img/plane.svg' %}" alt=""></button>
+                </div>
+            </div>
+            <div class="row__column">
+                <h3 class="row__column__title">Мы в соц.сетях:</h3>
+                <div class="row__column__socials">
+                    <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    <a href=""><i class="fab fa-telegram-plane" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class="row__column">
+                <h3 class="row__column__title">Адрес лаборатории:</h3>
+                <p class="row__column__adress">
+                    Узбекистан, г.Ташкент,
+                    ул. Восточная 43, офис №11
+                </p>
+            </div>
+            <div class="row__column">
+                <a  href="tel:++998 001 001 001" class="row__column__phone">
+                    +998 001 001 001
+                </a>
+                <a href="mailto:info@1glab.com" class="row__column__mail">info@1glab.com</a>
+            </div>
+        </div>
+        <div class="footer__row row">
+            <div class="row__column">
+                <a href="#" class="row__column__link row__column__link_1">Лицензии</a>
+            </div>
+            <div class="row__column">
+                <p class="row__column__copyright">© 2020 1GLAB - первая генетическая лаборатория</p>
+            </div>
+            <div class="row__column">
+                <a href="#" class="row__column__link row__column__link_2">Пользовательское соглашение</a>
+            </div>
+        </div>
+    </div>
+</footer>

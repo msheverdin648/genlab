@@ -176,52 +176,7 @@
     </div>
     <!--Конец блока-->
 
-    <!--Блок как сдается анализ-->
-    <div class="how">
-        <div class="container">
-            <h3 class="how__subtitle">Как сдается анализ</h3>
-            <h2 class="how__title">5 простых шагов</h2>
-            <div class="how__track track">
-                <div class="track__row row">
-                    <div class="row__item">
-                        <div class="row__item__ico"><img src="{% static 'img/pin.svg' %}" alt=""></div>
-                        <h4 class="row__item__header">Первый шаг</h4>
-                        <p class="row__item__description">Найти <a href="">адрес лаборатории</a>
-                            на нашем сайте</p>
-                    </div>
-                    <div class="row__item">
-                        <div class="row__item__ico"><img src="{% static 'img/lab.svg' %}" alt=""></div>
-                        <h4 class="row__item__header">Второй шаг</h4>
-                        <p class="row__item__description">Сдать анализы в
-                            нашей лаборатории</p>
-                    </div>
-                    <div class="row__item">
-                        <div class="row__item__ico"><img src="{% static 'img/time.svg' %}" alt=""></div>
-                        <h4 class="row__item__header">третий шаг</h4>
-                        <p class="row__item__description">Ожидать результата
-                            анализа из лаборатории</p>
-                    </div>
-                </div>
-                <div class="track__row row">
-                    <div class="row__item">
-                        <div class="row__item__ico"><img src="{% static 'img/conversation.svg' %}" alt=""></div>
-                        <h4 class="row__item__header">пятый шаг</h4>
-                        <p class="row__item__description">Записаться на консультацию
-                            по результатам исследования</p>
-                    </div>
-                    <div class="row__item">
-                        <div class="row__item__ico"><img src="{% static 'img/plan.svg' %}" alt=""></div>
-                        <h4 class="row__item__header">четвертый шаг</h4>
-                        <p class="row__item__description">Получить письмо с результатом анализа
-                            на email. Если информация не поступила,
-                            свяжитесь с <a href="">клиникой в Москве</a></p>
-                    </div>
-                </div>
-                <a href="" class="how__track__button">Заявка на анализ</a>
-            </div>
-        </div>
-    </div>
-    <!--Конец блока-->
+    {% include "include/steps.html" %}
     <!--Начало блока с новостями-->
     <div class="news">
         <div class="container">
@@ -229,7 +184,7 @@
                 Новости нашей лаборатории
             </h2>
             <!--Слайдер-->
-            <div class="news__slider slider">
+            <div class="news__slider slider" id="slider-2">
                 <div class="slider__item slide">
                     <div class="slide__content">
                         <div class="slide__content__image ibg"><img src="{% static 'img/news-slide_1.png' %}" alt=""></div>
@@ -296,8 +251,30 @@
                         </div>
                     </div>
                 </div>
+                <div class="slider__item slide">
+                    <div class="slide__content">
+                        <div class="slide__content__image ibg"><img src="{% static 'img/news-slide_2.png' %}" alt=""></div>
+                        <div class="slide__content__text">
+                            <h3 class="slide__content__text__header">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, quibusdam?</h3>
+                            <p class="slide__content__text__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, fugit nulla. Ullam, assumenda modi officiis velit eaque ipsa animi eum et obcaecati error, reiciendis itaque similique est, iste sint illum.</p>
+                            <div class="slide__content__text__more">
+                                <button class="slide__content__text__more__button">Читать подробнее</button>
+                                <span class="slide__content__text__more__date">8 января 2020</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
             </div>
             <!--Конец слайдера-->
+            <div class="news__navigate">
+                    <p class="num" id="slider-nav-2">
+                        <span class="num__this">01</span>
+                        /
+                        <span class="num__all">03</span>
+                    </p>
+            </div>
             <div class="news__button">
                 <a href="" class="news__button__link">Читать все публикации</a>
             </div>
