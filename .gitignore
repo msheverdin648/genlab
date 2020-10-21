@@ -1,0 +1,11 @@
+*.pyc
+*~
+__pycache__
+venv
+.DS_Store
+.vscode
+settings.py
+prod_settings.py
+local_Settings.py
+gunicorn.conf.py
+healthyfood.conf
