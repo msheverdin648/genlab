@@ -1,10 +1,22 @@
 $(document).ready(function(){
 
 
+    //Настройка блока с Основными исследования
+    $('.researches__items__item')
+    .mouseenter( function(){
+        $(this).addClass('active')
+        &(this).siblings().removeClass('active')
+    })
+    .mouseleave( function(){
+        $(this).removeClass('active')
+    })
+
+
+
+
     //Настройка сайдбара
     if ($('.sidebar').hasClass('active')){
         if($('.sidebar').hasClass('active')){
-            console.log('active')
         }
         $('.sidebar__open, .sidebar').on('click', function(){
             $('.sidebar, .sidebar__open').toggleClass('active');
@@ -47,48 +59,99 @@ $(document).ready(function(){
 
     $(".news__slider").on("afterChange", function(event, slick, currentSlide, nextSlide){
         $("#slider-nav-2 .num__this").text('0' + $('li.slick-active').text());
-        console.log($('li.slick-active button').text())
+
+    });
+
+
+    $('.partners__slider').slick({
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        appendArrows: $('.partners__navigate'),
+        nextArrow: '<button class="slick-next slick-arrow" aria-label="Next" type="button" style="">Следующий слайд</button>',
+        prevArrow: '<button class="slick-prev slick-arrow" aria-label="Prev" type="button" style="">Предыдущий слайд</button>',
+        dots: true,
+    })
+
+
+    $("#slider-nav-3 .num__all").text("0" + $("#slider-3 ul li").length)
+
+    $(".partners__slider").on("afterChange", function(event, slick, currentSlide, nextSlide){
+        $("#slider-nav-3 .num__this").text('0' + $('li.slick-active').text());
+
+    
     });
 
 
 
 
 
-    //Настройка блока с Основными исследования
-    $('.researches__items__item')
-    .mouseenter( function(){
-        $(this).addClass('active')
-        &(this).siblings().removeClass('active')
+
+
+
+
+    $('.researches__list__item__header').on('click', function(){
+        if ($(this).hasClass('active')){
+            $(this).removeClass('active')
+            $(this).children().removeClass('active')
+            $(this).parent().removeClass('active')
+            $(this).parent().parent().removeClass('active')
+            $(this).siblings().slideUp()
+        }else{
+            $(this).addClass('active')
+            $(this).children().addClass('active')
+            $(this).parent().addClass('active')
+            $(this).parent().parent().addClass('active')
+            $(this).siblings().slideDown()
+        }
     })
-    .mouseleave( function(){
-        $(this).removeClass('active')
+
+    $('.sublist__navigate').on('click', function(){
+        if ($(this).hasClass('active')){
+            $(this).removeClass('active')
+            $(this).parent().removeClass('active')
+            $(this).parent().siblings().slideUp()
+        }else{
+            $(this).addClass('active')
+            $(this).parent().addClass('active')
+            $(this).parent().siblings().slideDown()
+        }
     })
+
 
 
     //Настройка блока с часто задаваемыми вопросами 
 
 
 
-    $('.list__item').on('click', function(){
+    $('.list__item__question').on('click', function(){
             if ($(this).hasClass('active')){
                 $(this).removeClass('active')
                 $(this).children().removeClass('active')
-                $(this).children().children().removeClass('active')
-                $(this).children('.list__item__answer').slideUp()
+                $(this).parent().removeClass('active')
+                $(this).parent().parent().removeClass('active')
+                $(this).siblings().slideUp()
             }else{
-                $(this).siblings().removeClass('active')
-                $(this).siblings().children().removeClass('active')
-                $(this).siblings().children().children().removeClass('active')
-                $(this).siblings().children('.list__item__answer').slideUp()
-
-                $(this).addClass('active');  
-                $(this).children('.list__item__answer').slideDown()
+                $(this).addClass('active')
                 $(this).children().addClass('active')
-                $(this).children().children().addClass('active')
+                $(this).parent().addClass('active')
+                $(this).parent().parent().addClass('active')
+                $(this).siblings().slideDown()
 
-                
-    
             };
     })
+
+//Настройка сворачивания карточек
+
+    $('.card__navigate').on('click', function(){
+        if($(this).hasClass('active')){
+            $(this).removeClass('active')
+            $(this).siblings('.full').slideUp()
+        }else{
+            $(this).addClass('active')
+            $(this).siblings('.full').slideDown()  
+        }
+    })
+
+
     
 })

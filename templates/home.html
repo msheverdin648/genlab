@@ -97,12 +97,12 @@
         <div class="container">
             <h2 class="questions__header">Ответы на часто задаваемые вопросы</h2>
             <ol class="questions__list list">
-                <li class="list__item active">
-                    <h3 class="list__item__question active">
+                <li class="questions__list__header list__item  list__item">
+                    <h3 class="list__item__question list__header">
                         Какие исследования провести, если не наступает беременность?
-                        <span class="list__item__question__button active">Подробнее</span>
+                        <span class="list__item__question__button list__navigate">Подробнее</span>
                     </h3>
-                    <div class="list__item__answer">
+                    <div class="list__item__answer list__item__content hide">
                         <p class="list__item__answer_header">
                             Ответ:
                         </p>
@@ -111,12 +111,12 @@
                         </p>
                     </div>
                 </li>
-                <li class="list__item">
-                    <h3 class="list__item__question">
-                        У супруги неразвивающаяся (замершая) беременность, предстоит выскабливание. Прочитал что необходимо провести исследование (ХМА, цитогенетическое). Когда и как это можно сделать?
-                        <span class="list__item__question__button">Подробнее</span>
+                <li class="questions__list__header list__item  list__item">
+                    <h3 class="list__item__question list__header">
+                        Какие исследования провести, если не наступает беременность?
+                        <span class="list__item__question__button list__navigate">Подробнее</span>
                     </h3>
-                    <div class="list__item__answer hide">
+                    <div class="list__item__answer list__item__content hide">
                         <p class="list__item__answer_header">
                             Ответ:
                         </p>
@@ -125,12 +125,12 @@
                         </p>
                     </div>
                 </li>
-                <li class="list__item">
-                    <h3 class="list__item__question">
-                        Можно ли исправить генетику эмбрионов?
-                        <span class="list__item__question__button">Подробнее</span>
+                <li class="questions__list__header list__item  list__item">
+                    <h3 class="list__item__question list__header">
+                        Какие исследования провести, если не наступает беременность?
+                        <span class="list__item__question__button list__navigate">Подробнее</span>
                     </h3>
-                    <div class="list__item__answer hide">
+                    <div class="list__item__answer list__item__content hide">
                         <p class="list__item__answer_header">
                             Ответ:
                         </p>
@@ -139,12 +139,12 @@
                         </p>
                     </div>
                 </li>
-                <li class="list__item">
-                    <h3 class="list__item__question">
-                        Как подготовиться к проведению анализов на генетику?
-                        <span class="list__item__question__button">Подробнее</span>
+                <li class="questions__list__header list__item  list__item">
+                    <h3 class="list__item__question list__header">
+                        Какие исследования провести, если не наступает беременность?
+                        <span class="list__item__question__button list__navigate">Подробнее</span>
                     </h3>
-                    <div class="list__item__answer hide">
+                    <div class="list__item__answer list__item__content hide">
                         <p class="list__item__answer_header">
                             Ответ:
                         </p>
@@ -153,12 +153,12 @@
                         </p>
                     </div>
                 </li>
-                <li class="list__item">
-                    <h3 class="list__item__question">
-                        Неинвазивное пренатальное тестирование. С чего начать?
-                        <span class="list__item__question__button">Подробнее</span>
+                <li class="questions__list__header list__item  list__item">
+                    <h3 class="list__item__question list__header">
+                        Какие исследования провести, если не наступает беременность?
+                        <span class="list__item__question__button list__navigate">Подробнее</span>
                     </h3>
-                    <div class="list__item__answer hide">
+                    <div class="list__item__answer list__item__content hide">
                         <p class="list__item__answer_header">
                             Ответ:
                         </p>
@@ -167,10 +167,11 @@
                         </p>
                     </div>
                 </li>
+                
             </ol>
             <div class="questions__row">
                 <a href="#" class="questions__row__button">Задать свой вопрос</a>
-                <a href="#" class="questions__row__link">Читать другие ответы на вопросы</a>
+                <a href="{% url 'questions' %}" class="questions__row__link">Читать другие ответы на вопросы</a>
             </div>
         </div>
     </div>
@@ -269,11 +270,11 @@
             </div>
             <!--Конец слайдера-->
             <div class="news__navigate">
-                    <p class="num" id="slider-nav-2">
-                        <span class="num__this">01</span>
-                        /
-                        <span class="num__all">03</span>
-                    </p>
+                <p class="num" id="slider-nav-2">
+                    <span class="num__this">01</span>
+                    /
+                    <span class="num__all">03</span>
+                </p>
             </div>
             <div class="news__button">
                 <a href="" class="news__button__link">Читать все публикации</a>
