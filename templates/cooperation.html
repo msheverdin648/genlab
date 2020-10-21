@@ -10,42 +10,19 @@
             <h2 class="about__header">
                 Подробнее о нас
             </h2>
+            {% for card in cards  %}
             <div class="about__card card">
                 <div class="card__header">
                     <img src="{% static 'img/info-ico.svg' %}" alt="" class="card__ico">
-                    <h3 class="card__title">Информация о нашей компании</h3>
+                    <h3 class="card__title">{{card.name}}</h3>
                 </div>
-                <p class="card__text short">1GLAb – лаборатория, оснащённая самым современным оборудованием, выполняет широкий спектр исследований генетического материала в медицинских и немедицинских целях для заинтересованных организаций.</p>
+                <p class="card__text short">{{card.short_text}}</p>
                 <p class="card__text full hide">
-                    Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Залетают буквоград lorem, путь использовало необходимыми ручеек о инициал большого наш подзаголовок лучше пустился алфавит вопроса свою букв сбить буквенных.
+                    {{card.full_text}}
                 </p>
                 <p class="card__navigate"></p>
             </div>
-            <div class="about__card card">
-                <div class="card__header">
-                    <img src="{% static 'img/handsshake.svg' %}" alt="" class="card__ico">
-                    <h3 class="card__title">Преимущества партнёрства</h3>
-                </div>
-                <p class="card__text short">
-                    Уникальная особенность и ключевое отличие Лаборатории от аналогичных компаний – гибкость в реализации любых исследовательских целей. Все процессы в 1GLAb  построены таким образом, что имеется возможность быстро спланировать и провести необходимые исследования даже для одного клиента с уникальным набором потребностей.
-                    </p>
-                <p class="card__text full hide">
-                    Разнообразное оборудование и технологии, перенесённые из лучших лабораторий мира, позволяют быстро проводить исследования, по качеству не уступающие результатам работы лидеров глобального рынка.
-                </p>
-                <p class="card__navigate"></p>
-            </div>
-            <div class="about__card card">
-                <div class="card__header">
-                    <img src="{% static 'img/healthhome.svg' %}" alt="" class="card__ico">
-                    <h3 class="card__title">Сотрудничество с медицинскими центрами</h3>
-                </div>
-                <p class="card__text short">На базе нашей лаборатории возможно проведение диагностики наиболее распространенных в  наследственных заболеваний и состояний (спинальной амиотрофии, синдрома Жильбера и др.), тестов на предрасположенность к онкологической патологии и многих других молекулярно-генетических исследований.</p>
-                <p class="card__text full hide">
-                    Разнообразное оборудование и технологии, перенесённые из лучших лабораторий мира, позволяют быстро проводить исследования, по качеству не уступающие результатам работы лидеров глобального рынка.
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos aperiam molestiae ullam iste itaque. Aut, consectetur facilis? Quod laboriosam voluptates saepe itaque? Commodi temporibus ipsa soluta eligendi? Veritatis, excepturi. Inventore.
-                </p>
-                <p class="card__navigate"></p>
-            </div>
+            {% endfor %}
         </div>
     </div>
     <!--Конец блока-->

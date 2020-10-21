@@ -131,87 +131,34 @@
             </h2>
             <!--Слайдер-->
             <div class="news__slider slider" id="slider-2">
-                <div class="slider__item slide">
-                    <div class="slide__content">
-                        <div class="slide__content__image ibg"><img src="{% static 'img/news-slide_1.png' %}" alt=""></div>
-                        <div class="slide__content__text">
-                            <h3 class="slide__content__text__header"> Самые современные методы анализа материала ДНК уже в Узбекистане</h3>
-                            <p class="slide__content__text__description">Возможно, вы уже прошли дорогостоящие длительные дополнительные медицинские обследования, но так и не получили ответ на ваш вопрос. Возможно, вы в настоящий момент готовитесь к выскабливанию. В любом случае, мы готовы помочь вам и вашему врачу в решении проблемы.</p>
-                            <div class="slide__content__text__more">
-                                <button class="slide__content__text__more__button">Читать подробнее</button>
-                                <span class="slide__content__text__more__date">10 января 2020</span>
+                {% for a in news  %}
+                    <div class="slider__item slide">
+                        <div class="slide__content">
+                            <div class="slide__content__image ibg"><img src="{{a.img.url}}" alt=""></div>
+                            <div class="slide__content__text">
+                                <h3 class="slide__content__text__header">{{a.title}}</h3>
+                                <p class="slide__content__text__description">{{a.text}}</p>
+                                <div class="slide__content__text__more">
+                                    <a href="#" class="slide__content__text__more__button">Читать подробнее</a>
+                                    <span class="slide__content__text__more__date">{{a.date}}</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="slider__item slide">
-                    <div class="slide__content">
-                        <div class="slide__content__image ibg"><img src="{% static 'img/news-slide_2.png' %}" alt=""></div>
-                        <div class="slide__content__text">
-                            <h3 class="slide__content__text__header">Большое обновление спектра услуг.
-                                Что нового в этом году?</h3>
-                            <p class="slide__content__text__description">К сожалению, не всегда супружеская пара, столкнувшаяся с необъяснимой причиной прервавшейся беременности, оказывается в кабинете генетика, чтобы получить профессиональную «направляющую» в последующем обследовании и попытаться установить эти причины.</p>
-                            <div class="slide__content__text__more">
-                                <button class="slide__content__text__more__button">Читать подробнее</button>
-                                <span class="slide__content__text__more__date">8 января 2020</span>
+                    <div class="slider__item slide">
+                        <div class="slide__content">
+                            <div class="slide__content__image ibg"><img src="{{a.img.url}}" alt=""></div>
+                            <div class="slide__content__text">
+                                <h3 class="slide__content__text__header">{{a.title}}</h3>
+                                <p class="slide__content__text__description">{{a.text}}</p>
+                                <div class="slide__content__text__more">
+                                    <a href="#" class="slide__content__text__more__button">Читать подробнее</a>
+                                    <span class="slide__content__text__more__date">{{a.date}}</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="slider__item slide">
-                    <div class="slide__content">
-                        <div class="slide__content__image ibg"><img src="{% static 'img/news-slide_1.png' %}" alt=""></div>
-                        <div class="slide__content__text">
-                            <h3 class="slide__content__text__header"> Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.</h3>
-                            <p class="slide__content__text__description">Далеко-далеко за словесными горами в стране гласных и согласных живут, рыбные тексты. Курсивных, страна точках жизни обеспечивает океана о щеке страну лучше предложения не всемогущая наш себя имени, однажды семь образ составитель.</p>
-                            <div class="slide__content__text__more">
-                                <button class="slide__content__text__more__button">Читать подробнее</button>
-                                <span class="slide__content__text__more__date">10 января 2020</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="slider__item slide">
-                    <div class="slide__content">
-                        <div class="slide__content__image ibg"><img src="{% static 'img/news-slide_2.png' %}" alt=""></div>
-                        <div class="slide__content__text">
-                            <h3 class="slide__content__text__header">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, quibusdam?</h3>
-                            <p class="slide__content__text__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, fugit nulla. Ullam, assumenda modi officiis velit eaque ipsa animi eum et obcaecati error, reiciendis itaque similique est, iste sint illum.</p>
-                            <div class="slide__content__text__more">
-                                <button class="slide__content__text__more__button">Читать подробнее</button>
-                                <span class="slide__content__text__more__date">8 января 2020</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="slider__item slide">
-                    <div class="slide__content">
-                        <div class="slide__content__image ibg"><img src="{% static 'img/news-slide_2.png' %}" alt=""></div>
-                        <div class="slide__content__text">
-                            <h3 class="slide__content__text__header">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, quibusdam?</h3>
-                            <p class="slide__content__text__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, fugit nulla. Ullam, assumenda modi officiis velit eaque ipsa animi eum et obcaecati error, reiciendis itaque similique est, iste sint illum.</p>
-                            <div class="slide__content__text__more">
-                                <button class="slide__content__text__more__button">Читать подробнее</button>
-                                <span class="slide__content__text__more__date">8 января 2020</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="slider__item slide">
-                    <div class="slide__content">
-                        <div class="slide__content__image ibg"><img src="{% static 'img/news-slide_2.png' %}" alt=""></div>
-                        <div class="slide__content__text">
-                            <h3 class="slide__content__text__header">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, quibusdam?</h3>
-                            <p class="slide__content__text__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, fugit nulla. Ullam, assumenda modi officiis velit eaque ipsa animi eum et obcaecati error, reiciendis itaque similique est, iste sint illum.</p>
-                            <div class="slide__content__text__more">
-                                <button class="slide__content__text__more__button">Читать подробнее</button>
-                                <span class="slide__content__text__more__date">8 января 2020</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                
+                {% endfor %}
             </div>
             <!--Конец слайдера-->
             <div class="news__navigate">

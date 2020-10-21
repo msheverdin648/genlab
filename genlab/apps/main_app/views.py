@@ -27,30 +27,52 @@ class SorryView(View):
 class HomeView(View):
 
     def get(self, request):
-
         slides = HeaderSlid.objects.filter(page='home')
         researches = Research.objects.all()
         questions = QuestionsAnswers.objects.filter(show_home=True)
+        news = News.objects.all()
         return render(request, 'home.html', {
-            slides: 'slides',
-            researches: 'researches',
-            questions: 'questions',
+            'slides': slides,
+            'researches': researches,
+            'questions': questions,
+            'news': news,
         })
 
 
 class ResearchesView(View):
 
     def get(self, request):
-        return render(request, 'researches.html')
+        slides = HeaderSlid.objects.filter(page='researches')
+
+
+        context={
+            'slides':slides,
+        }
+        return render(request, 'researches.html', context)
 
 
 class QuestionsView(View):
 
     def get(self, request):
-        return render(request, 'questions.html')
+        slides = HeaderSlid.objects.filter(page='questions')
+        questions = QuestionsAnswers.objects.all()
+
+        context={
+            'slides':slides,
+            'questions': questions,
+        }
+
+        return render(request, 'questions.html', context)
 
 class CooperationView(View):
 
+    
     def get(self, request):
-        return render(request, 'cooperation.html')
+        cards = About.objects.all()
+        slides = HeaderSlid.objects.filter(page='cooperation')
+        context = {
+            'cards': cards,
+            'slides': slides,
+        }
+        return render(request, 'cooperation.html', context)
 
