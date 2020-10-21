@@ -70,6 +70,7 @@ $(document).ready(function(){
         nextArrow: '<button class="slick-next slick-arrow" aria-label="Next" type="button" style="">Следующий слайд</button>',
         prevArrow: '<button class="slick-prev slick-arrow" aria-label="Prev" type="button" style="">Предыдущий слайд</button>',
         dots: true,
+        
     })
 
 

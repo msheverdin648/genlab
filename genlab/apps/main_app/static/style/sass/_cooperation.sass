@@ -44,9 +44,13 @@
     &__slider 
         display: flex
     &__item 
-        flex: 1 1 25%
         padding: 0 10px
-        height: 100px
+        &__content
+            display: flex
+            justify-content: center
+            align-items: center
+            height: 120px
+                
     &__navigate
         @extend .news__navigate
 
