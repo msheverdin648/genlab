@@ -79,7 +79,7 @@ class HeaderSlid(models.Model):
     link_url = models.CharField(("URL ссылки"), max_length=50 , null=True, blank=True)
 
     def __str__(self):
-        return self.slide_header
+        return self.slide_header+ f'({self.page})'
 
 
 class QuestionsAnswers(models.Model):
@@ -120,6 +120,9 @@ class Partners(models.Model):
     name = models.CharField(("Название партнера"), max_length=256)
     img = models.ImageField(("Картинка логотипа"), upload_to='img')
     link = models.CharField(("Ссылка на сайт партнера"), max_length=256, null=True, blank=True)
+    
+    def __str__(self):
+        return self.name
 
 class News(models.Model):
     class Meta:

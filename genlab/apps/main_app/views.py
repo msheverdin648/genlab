@@ -3,9 +3,19 @@ from django.urls import reverse_lazy
 from django.http import HttpResponseRedirect 
 from django.views.generic.base import View
 from django.views.generic import ListView, DetailView, CreateView
+from .models import (
+    ResearchMethod,
+    ResearchType,
+    Research,
+    HeaderSlid,
+    QuestionsAnswers,
+    About,
+    Partners,
+    News,
+    )
 
 
-#Как появятся все странички убрать
+#Как появятся все странички, убрать
 #--------------------------------------------------------
 class SorryView(View):
     
@@ -17,7 +27,15 @@ class SorryView(View):
 class HomeView(View):
 
     def get(self, request):
-        return render(request, 'home.html', {})
+
+        slides = HeaderSlid.objects.filter(page='home')
+        researches = Research.objects.all()
+        questions = QuestionsAnswers.objects.filter(show_home=True)
+        return render(request, 'home.html', {
+            slides: 'slides',
+            researches: 'researches',
+            questions: 'questions',
+        })
 
 
 class ResearchesView(View):

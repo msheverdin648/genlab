@@ -97,9 +97,10 @@
         <div class="container">
             <h2 class="questions__header">Ответы на часто задаваемые вопросы</h2>
             <ol class="questions__list list">
+                {% for a in questions  %}
                 <li class="questions__list__header list__item  list__item">
                     <h3 class="list__item__question list__header">
-                        Какие исследования провести, если не наступает беременность?
+                        {{ a.question }}
                         <span class="list__item__question__button list__navigate">Подробнее</span>
                     </h3>
                     <div class="list__item__answer list__item__content hide">
@@ -107,67 +108,11 @@
                             Ответ:
                         </p>
                         <p class="list__item__answer_text">
-                            Добрый день! В данной ситуации мы рекомендуем провести диагностику хромосомной патологии при неразвивающейся беременности методом хромосомно-микроматричного анализа. В нашей лаборатории данное исследование называется «КРЕДО». Срок проведения исследования 14 рабочих дней. По результатам исследования Вы сможете получить бесплатную консультацию врача-генетика в нашем центре.
+                            {{ a.answer }}
                         </p>
                     </div>
                 </li>
-                <li class="questions__list__header list__item  list__item">
-                    <h3 class="list__item__question list__header">
-                        Какие исследования провести, если не наступает беременность?
-                        <span class="list__item__question__button list__navigate">Подробнее</span>
-                    </h3>
-                    <div class="list__item__answer list__item__content hide">
-                        <p class="list__item__answer_header">
-                            Ответ:
-                        </p>
-                        <p class="list__item__answer_text">
-                            Добрый день! В данной ситуации мы рекомендуем провести диагностику хромосомной патологии при неразвивающейся беременности методом хромосомно-микроматричного анализа. В нашей лаборатории данное исследование называется «КРЕДО». Срок проведения исследования 14 рабочих дней. По результатам исследования Вы сможете получить бесплатную консультацию врача-генетика в нашем центре.
-                        </p>
-                    </div>
-                </li>
-                <li class="questions__list__header list__item  list__item">
-                    <h3 class="list__item__question list__header">
-                        Какие исследования провести, если не наступает беременность?
-                        <span class="list__item__question__button list__navigate">Подробнее</span>
-                    </h3>
-                    <div class="list__item__answer list__item__content hide">
-                        <p class="list__item__answer_header">
-                            Ответ:
-                        </p>
-                        <p class="list__item__answer_text">
-                            Добрый день! В данной ситуации мы рекомендуем провести диагностику хромосомной патологии при неразвивающейся беременности методом хромосомно-микроматричного анализа. В нашей лаборатории данное исследование называется «КРЕДО». Срок проведения исследования 14 рабочих дней. По результатам исследования Вы сможете получить бесплатную консультацию врача-генетика в нашем центре.
-                        </p>
-                    </div>
-                </li>
-                <li class="questions__list__header list__item  list__item">
-                    <h3 class="list__item__question list__header">
-                        Какие исследования провести, если не наступает беременность?
-                        <span class="list__item__question__button list__navigate">Подробнее</span>
-                    </h3>
-                    <div class="list__item__answer list__item__content hide">
-                        <p class="list__item__answer_header">
-                            Ответ:
-                        </p>
-                        <p class="list__item__answer_text">
-                            Добрый день! В данной ситуации мы рекомендуем провести диагностику хромосомной патологии при неразвивающейся беременности методом хромосомно-микроматричного анализа. В нашей лаборатории данное исследование называется «КРЕДО». Срок проведения исследования 14 рабочих дней. По результатам исследования Вы сможете получить бесплатную консультацию врача-генетика в нашем центре.
-                        </p>
-                    </div>
-                </li>
-                <li class="questions__list__header list__item  list__item">
-                    <h3 class="list__item__question list__header">
-                        Какие исследования провести, если не наступает беременность?
-                        <span class="list__item__question__button list__navigate">Подробнее</span>
-                    </h3>
-                    <div class="list__item__answer list__item__content hide">
-                        <p class="list__item__answer_header">
-                            Ответ:
-                        </p>
-                        <p class="list__item__answer_text">
-                            Добрый день! В данной ситуации мы рекомендуем провести диагностику хромосомной патологии при неразвивающейся беременности методом хромосомно-микроматричного анализа. В нашей лаборатории данное исследование называется «КРЕДО». Срок проведения исследования 14 рабочих дней. По результатам исследования Вы сможете получить бесплатную консультацию врача-генетика в нашем центре.
-                        </p>
-                    </div>
-                </li>
-                
+                {% endfor %}
             </ol>
             <div class="questions__row">
                 <a href="#" class="questions__row__button">Задать свой вопрос</a>
