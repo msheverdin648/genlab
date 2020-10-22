@@ -567,13 +567,13 @@
 }
 
 .researches__items .research__header {
-  font-family: 'Vollkorn';
+  margin-bottom: 20px;
+  font-family: 'Ubuntu';
   font-weight: 700;
   font-style: normal;
-  font-size: 25px;
-  line-height: 29.45px;
+  font-size: 17px;
+  line-height: 21.23px;
   color: #252525;
-  margin-bottom: 20px;
 }
 
 .researches__items .research__underline {

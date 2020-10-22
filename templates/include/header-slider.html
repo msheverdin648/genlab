@@ -7,7 +7,7 @@
 {% block header-slider %}
     <header class="header">
         <div class="container">
-            <div class="header__slider">
+            <div class="header__slider" id="slider-1">
                {% for slide in slides %}
                 <div class="header__slider__item" style="background: url({{slide.image.url}}){% if request.path == home_url %}
                         , url({% static 'img/header-rectangle-big.svg' %});
@@ -22,8 +22,8 @@
                         ">
                         <div class="header__slider__item__content">
                             <div class="header__slider__item__content__navigate">
-                                <p class="header__slider__item__content__navigate__slides num">
-                                    <span class="num__this">01</span>/<span class="num__all">03</span>
+                                <p class="header__slider__item__content__navigate__slides num header__navigate" id="slider-nav-1">
+                                    <span class="num__this">01</span>/<span class="num__all"></span>
                                 </p>
                                 <div class="header__slider__item__content__navigate__next">
                                 </div>
@@ -34,32 +34,8 @@
                             <a href="" class="header__slider__item__content__link">{{slide.link_text}}</a>
                         </div>
                     </div>
-                    <div class="header__slider__item" style="background: url({{slide.image.url}}){% if request.path == home_url %}
-                    , url({% static 'img/header-rectangle-big.svg' %});
-                    {% elif request.path == cooperation_url %}
-                    , url({% static 'img/triangle.svg' %});
-                    {% elif request.path == questions_url %}
-                    , url({% static 'img/question-mark.svg' %});
-                    {% elif request.path == researches_url %}
-                    , url({% static 'img/ellipse.svg' %});
-                    {% endif %} 
-                        
-                    ">
-                    <div class="header__slider__item__content">
-                        <div class="header__slider__item__content__navigate">
-                            <p class="header__slider__item__content__navigate__slides num">
-                                <span class="num__this">01</span>/<span class="num__all">03</span>
-                            </p>
-                            <div class="header__slider__item__content__navigate__next">
-                            </div>
-                        </div>
-                        <h1 class="header__slider__item__content__header">{{slide.slide_header}}</h1>
-                        <p class="header__slider__item__content__text">{{slide.slide_text}}</p>
-                        <a href="" class="header__slider__item__content__button">{{slide.button_text}}</a>
-                        <a href="" class="header__slider__item__content__link">{{slide.link_text}}</a>
-                    </div>
-                </div>
                {% endfor %}
+               
             </div>
         </div>
     </header>

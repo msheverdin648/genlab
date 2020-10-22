@@ -13,7 +13,9 @@
             {% for card in cards  %}
             <div class="about__card card">
                 <div class="card__header">
-                    <img src="{% static 'img/info-ico.svg' %}" alt="" class="card__ico">
+                    {% if card.ico %}
+                        <img src="{{ card.ico.url }}" alt="" class="card__ico">
+                    {% endif %}
                     <h3 class="card__title">{{card.name}}</h3>
                 </div>
                 <p class="card__text short">{{card.short_text}}</p>

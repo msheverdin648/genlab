@@ -13,6 +13,7 @@ class ResearchMethod(models.Model):
     name = models.CharField(("Название метода"), max_length=500)
     period = models.IntegerField(("Срок исследования"))
     price = models.DecimalField(("Цена исследования"), max_digits=12, decimal_places=2)
+    slug = models.SlugField(("Ссылка метода"))
 
 
     def __str__(self):
@@ -48,6 +49,23 @@ class Research(models.Model):
 
     def __str__(self):
         return self.name
+
+
+
+class MainResearches(models.Model):
+
+    class Meta:
+        db_table = ''
+        managed = True
+        verbose_name = 'Основное направление исследования'
+        verbose_name_plural = 'Основные направления исследования'
+
+    name = models.CharField(("Название основного направления"), max_length=256)
+    types = models.ManyToManyField(ResearchType, verbose_name=("Методы исследования данного направления"))  
+
+    def __str__(self):
+        return self.name
+
 
 class HeaderSlid(models.Model):
     class Meta:
@@ -106,6 +124,7 @@ class About(models.Model):
     name = models.CharField(("Заголовок карточки"), max_length=150)
     short_text = models.CharField(("Краткое описание"), max_length=500)
     full_text = models.TextField(("Полное описание(без краткого)"))
+    ico = models.FileField(("Иконка данного блока(jpg, svg, png)"), upload_to='img', max_length=1024, null=True, blank=True)
 
     def __str__(self):
         return self.name

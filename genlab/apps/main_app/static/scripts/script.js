@@ -42,8 +42,16 @@ $(document).ready(function(){
         appendArrows: $('.header__slider'),
         nextArrow: '<button class="slick-next slick-arrow" aria-label="Next" type="button" style="">Следующий слайд</button>',
         prevArrow: false,
+        dots: true,
 
     })
+
+    $("#slider-nav-1 .num__all").text("0" + $("#slider-1 ul li").length)
+
+    $(".header__slider").on("afterChange", function(event, slick, currentSlide, nextSlide){
+        $("#slider-nav-1 .num__this").text( '0'+ (currentSlide+1));
+    })
+
 
     $('.news__slider').slick({
         slidesToShow: 2,
@@ -58,7 +66,7 @@ $(document).ready(function(){
     $("#slider-nav-2 .num__all").text("0" + $("#slider-2 ul li").length)
 
     $(".news__slider").on("afterChange", function(event, slick, currentSlide, nextSlide){
-        $("#slider-nav-2 .num__this").text('0' + $('li.slick-active').text());
+        $("#slider-nav-2 .num__this").text('0' +( $('li.slick-active').text() - '10'));
 
     });
 
@@ -77,7 +85,7 @@ $(document).ready(function(){
     $("#slider-nav-3 .num__all").text("0" + $("#slider-3 ul li").length)
 
     $(".partners__slider").on("afterChange", function(event, slick, currentSlide, nextSlide){
-        $("#slider-nav-3 .num__this").text('0' + $('li.slick-active').text());
+        $("#slider-nav-3 .num__this").text('0' + ($('li.slick-active').text()-'10'));
 
     
     });
