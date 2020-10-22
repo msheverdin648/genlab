@@ -8,7 +8,7 @@
         <div class="container">
             <h2 class="search__header">Интересует конкретная услуга?</h2>
             <p class="search__text">Введите ее название в строку поиска, чтобы найти нужное исследование</p>
-            <form method="GET" class="search__item" action="{% url 'search' %}">
+            <form method="GET" class="search__item" action="{% url 'search' %}" id="search">
                 <input type="text" placeholder="Поиск исследования" class="search__item__input" name="q">
                 <button class="search__item__button" type="submit">
                     Найти исследование

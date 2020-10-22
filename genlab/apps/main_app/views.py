@@ -81,14 +81,11 @@ class CooperationView(View):
         }
         return render(request, 'cooperation.html', context)
 
-class SerachView(ListView):
+class Serach(View):
 
-    def get_queryset(self):
-        return ResearchType.objects.filter(name__incontains=self.request.GET.get('q'))
+    def get(self, request):
+        pass
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context["q"] = self.request.GET.get('q')
-        return context
-    
+    def post(self, request):
+        pass
 
