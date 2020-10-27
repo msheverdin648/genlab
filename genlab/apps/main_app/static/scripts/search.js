@@ -1,15 +1,28 @@
-var bestPictures = new Bloodhound({
-    datumTokenizer: Bloodhound.tokenizers.obj.whitespace('value'),
-    queryTokenizer: Bloodhound.tokenizers.whitespace,
-    prefetch: '../data/films/post_1960.json',
-    remote: {
-      url: '../data/films/queries/%QUERY.json',
-      wildcard: '%QUERY'
-    }
-  });
-  
-  $('#remote .typeahead').typeahead(null, {
-    name: 'best-pictures',
-    display: 'value',
-    source: bestPictures
-  });
+$(document).ready(function(){
+
+
+  function send_get(){
+
+    let serializedData = $('#search').serialize();
+
+    $.ajax({
+      url: $('#search').data('url'),
+      data: serializedData,
+      type: 'get',
+      success: function(response){
+        $('.search__header').append(
+            '<h2>' + response.types[0].type + '</h2>'
+        )
+      }
+    })
+
+  }
+
+
+  $('#search').on('input', function(){
+    setTimeout(send_get, 1500);
+  })
+
+})
+
+

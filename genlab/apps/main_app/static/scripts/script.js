@@ -5,7 +5,7 @@ $(document).ready(function(){
     $('.researches__items__item')
     .mouseenter( function(){
         $(this).addClass('active')
-        &(this).siblings().removeClass('active')
+        $(this).siblings().removeClass('active')
     })
     .mouseleave( function(){
         $(this).removeClass('active')
