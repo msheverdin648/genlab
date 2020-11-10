@@ -99,9 +99,15 @@ class Serach(View):
         q = request.GET.get('q')
         search_list = []
         types = ResearchType.objects.filter(name__icontains = q)
-        for b in types:
-            new = {'type': b.name}
-            search_list.append(new)
-        return JsonResponse({'types': search_list}, safe=False)
+        if types:
+            if q == " " or q == "" :
+                print("пусто")
+            else:
+                print("Вывод "+ q)
+                for b in types:
+                    new = {'type': b.name}
+                    search_list.append(new)
+                return JsonResponse({'types': search_list}, safe=False)
+        
 
 

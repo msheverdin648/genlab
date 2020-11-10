@@ -1,5 +1,21 @@
 $(document).ready(function(){
 
+  function clean(){
+    $('.search__list').children().remove(('li.search__list__item'))
+  }
+
+  function append(response){
+    let range = response.types.length
+    if (range > 6){
+      range = 6
+    }
+
+    for (let index = 0; index < range; index++) {
+      $('.search__list').append(
+        '<li class="search__list__item">' + response.types[index].type + '</li>'    
+      )
+    }
+  }
 
   function send_get(){
 
@@ -10,8 +26,13 @@ $(document).ready(function(){
       data: serializedData,
       type: 'get',
       success: function(response){
-        $('.search__header').append(
-            '<h2>' + response.types[0].type + '</h2>'
+        clean()
+        append(response)
+      },
+      error: function(){
+        clean()
+        $('.search__list').append(
+        '<li class="search__list__item search__list__item_not-found">Исследований не найдено</li>'    
         )
       }
     })
@@ -20,8 +41,12 @@ $(document).ready(function(){
 
 
   $('#search').on('input', function(){
-    setTimeout(send_get, 1500);
+    setTimeout(send_get, 1500)
   })
+
+
+
+ 
 
 })
 

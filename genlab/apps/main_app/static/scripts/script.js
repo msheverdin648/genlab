@@ -162,6 +162,8 @@ $(document).ready(function(){
     })
 
 
-
-    
+    $(document).on('click', '.search__list__item', function() {
+        let q = $(this).text()
+        $('.search__item__input').val(q) 
+    });
 })

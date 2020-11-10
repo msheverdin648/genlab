@@ -525,6 +525,36 @@
   line-height: 14px;
 }
 
+.search__list {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  width: 80.6%;
+  background: #BB669B;
+  z-index: 20;
+}
+
+.search__list__item {
+  display: block;
+  padding: 10px 10px;
+  font-family: 'Ubuntu';
+  font-weight: 300;
+  font-style: normal;
+  margin-bottom: 2px;
+}
+
+.search__list__item:hover {
+  cursor: pointer;
+  background: #D785B8;
+}
+
+.search__list__item_not-found:hover {
+  cursor: default;
+  background: #BB669B;
+}
+
 .researches {
   padding: 56px 0;
 }

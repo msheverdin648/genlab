@@ -48,6 +48,27 @@
         line-height: 14px
 
 
+    &__list
+        position: absolute
+        bottom: 0
+        left: 0
+        transform: translateY(100%)
+        width: 80.6%
+        background: $pink
+        z-index: 20
+        &__item
+            display: block
+            padding: 10px 10px
+            +u_light
+            margin-bottom: 2px
+            &:hover
+                cursor: pointer
+                background: #D785B8
+            &_not-found
+                &:hover
+                    cursor: default
+                    background: $pink
+
 
 .researches 
     padding: 56px 0
