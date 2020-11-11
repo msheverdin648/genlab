@@ -1,0 +1,310 @@
+
+@import 'color'
+@import 'mixins'
+@import 'sidebar'
+@import 'header-slider'
+@import 'home'
+@import 'footer'
+@import 'researches'
+@import 'cooperation'
+@import 'research-method'
+
+.wrapper
+    display: flex
+.container 
+    width: 1024px
+    margin: 0 auto
+
+.content
+    flex: 1 1 auto
+
+.hide
+    display: none
+
+
+
+.ibg
+    background-position: center
+    background-size: cover
+    background-repeat: no-repeat
+    position: relative
+
+
+
+.ibg img
+    width: 0
+    height: 0
+    position: absolute
+    top: 0
+    left: 0
+    opacity: 0
+    visibility: hidden
+
+
+//Удалить после того как будут созданы все страницы
+.sorry
+    font-size: 50px 
+
+
+
+
+
+.list
+    counter-reset: li
+    list-style: none
+    &__item
+        padding: 30px 0px 30px 0px
+        border-top: 1px solid #ECECEC
+        border-bottom: 1px solid #ECECEC
+        
+        &.active
+            background: $pink
+            border-top: 1px solid $pink
+            border-bottom: 1px solid $pink
+        &__block
+            padding-left: 80px
+            max-width: 80%
+        
+    &__header
+        padding-left: 80px
+        position: relative
+        +u_medium
+        font-size: 16px
+        line-height: 18.85px
+        display: flex
+        justify-content: space-between
+        &.active
+            color: #ffffff
+            &::before
+                color: #F6BDE1
+        &:hover
+            cursor: pointer
+        &::before
+            content: "0"counter(li)
+            counter-increment: li
+            position: absolute
+            color: #EFEFEF
+            font-size: 37px
+            +u_bold
+            top: 0
+            left: 0
+            transform: translateX(50%)
+    &__navigate
+        position: relative
+        font-size: 14px
+        +u_medium
+        color: $pink
+        margin: 0 0 0 55px
+        padding: 0 40px 0 0
+        &:hover
+            cursor: pointer
+        &::after
+            display: block
+            position: absolute
+            right: 0
+            top: 0
+            content: ""
+            width: 10px
+            height: 20px
+            background: url('../../img/arrow-down.svg') center no-repeat
+            transform: translateX(-150%)
+        &.active
+            color: #F6BDE1
+            &::after
+                background: url('../../img/arrow-up.svg') center no-repeat
+    
+
+    &__text
+        color: #ffffff
+        +u_normal
+        font-size: 14px
+        line-height: 19.71px
+
+
+.sublist
+    list-style: none
+    counter-reset: li
+    margin-top: 30px
+    &__item 
+        position: relative
+        padding: 30px 0px 30px 0px
+        margin: 0 25px 0 80px
+        border-top: 1px solid #C682AC
+        border-bottom: 1px solid #C682AC
+        
+        &.active
+            .sublist__title
+                +u_bold
+                color: #ffffff
+        
+        
+    &__title
+        position: relative
+        +u_normal
+        font-size: 14px
+        line-height: 18.85px
+        display: flex
+        justify-content: space-between
+        color: #ffffff
+        &::before
+            counter-increment: li
+            content: counters(li,'.')
+            position: absolute
+            color: #F6BDE1
+            +u_bold
+            font-size: 16px
+            top: 0
+            left: 0
+            transform: translateX(-200%)
+    &__navigate
+        display: block
+        margin: 0 0 0 43px
+        &::after
+            content: "Открыть"
+            display: block
+            color: #ffffff
+            font-size: 14px
+            +u_normal
+            border: 1px solid #FFFFFF
+            background: $pink
+            padding: 7px 22px
+        &.active
+            &::after
+                content: "Закрыть"
+        &:hover
+            cursor: pointer
+
+.card
+    padding: 31px 99px 34px 40px
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.06);
+    margin-bottom: 15px
+    &__header 
+        display: flex
+        align-items: center
+        margin-bottom: 13px
+    &__ico 
+
+    &__title
+        +u_bold
+        font-size: 16px
+        line-height: 18.38px
+        margin-left: 11px
+    
+    &__text 
+        color: #707070
+        +u_normal
+        font-size: 16px
+        line-height: 22.4px
+    &__navigate 
+        display: block
+        position: relative
+        height: 16px
+        margin-top: 16px
+        &:hover
+            cursor: pointer
+        &::before
+            content: "Читать подробнее"
+            display: block
+            position: absolute
+            top: 0
+            left: 0
+            color: $pink
+            +u_medium
+            font-size: 14px
+            line-height: 16.49px
+        &::after
+            content: ""
+            display: block
+            position: absolute
+            top: 0
+            left: 137px
+            background: url('../../img/arrow-down.svg') center no-repeat
+            height: 100%
+            width: 10px
+            transform: translateY(20%)
+        &.active
+            &::after
+                left: 75px
+                transform: translateY(20%) rotate(180deg)
+            &::before
+                content: "Свернуть"
+
+
+.form 
+    
+    &__row 
+        display: flex
+        align-items: center
+        justify-content: space-between
+        &_inputs
+            margin-bottom: 15px
+        &_check
+            justify-content: center
+            margin-bottom: 24px
+        &_button
+            justify-content: center
+    &__column 
+        display: flex
+        flex-direction: column
+        text-align: start
+        
+    &__label 
+        +u_normal
+        font-size: 14px
+        line-height: 14.4px
+        margin-bottom: 10px
+    &__input 
+        background: rgba(51, 51, 51, 0.53);
+        border: 1px solid #565656;
+        padding: 17px 60px 17px 20px
+        color: #828282
+        +u_normal
+        font-size: 14px
+        line-height: 16.49px
+    &__checkbox 
+        display: none
+        
+        &:checked+.checkbox__label
+                &::before
+                    background: url('../../img/checked.svg') center no-repeat
+                    border: 1px solid $pink
+        
+            
+    &__button 
+        color: #ffffff
+        background: $pink
+        padding: 16px 46px
+        font-size: 15px
+        +u_bold
+        line-height: 22.2px
+
+.link
+    color: $pink
+    &:visited,
+    &:active,
+    &:hover
+        color: $pink
+    &:hover
+        text-decoration: underline
+.checkbox__label
+    display: block
+    position: relative
+    padding-left: 18px
+    max-width: 290px
+    text-align: start
+    font-size: 12px
+    &::before
+        content: ""
+        display: block
+        background: #2B2B2B;
+        border: 1px solid #727272;
+        color: $pink
+        position: absolute
+        width: 10px
+        height: 10px
+        top: 0
+        left: 0
+        transform: translateY(25%)
+    &:hover
+        cursor: pointer
+    

@@ -1,0 +1,91 @@
+.footer 
+    padding: 41px 0 31px 0
+    background: #2E2E2E
+    
+    &__row 
+
+
+.row 
+    display: flex
+    &:first-child
+        margin-bottom: 57px
+    &__column 
+        flex: 1 1 25%
+        &:nth-child(2)
+            text-align: center
+        &__title 
+            color: #D7D7D7
+            +u_normal
+            font-size: 14px
+            line-height: 17.77px
+            margin-bottom: 10px
+        &__send 
+            
+        &__socials 
+            font-size: 25px
+            i
+                color: #ffffff
+            a
+                &:nth-child(2)
+                    margin: 0 14px
+                    
+        &__adress 
+            +u_medium
+            font-size: 14px
+            line-height: 18.9px
+            color: #ffffff
+        &__phone 
+            display: block
+            color: #ffffff
+            +u_bold
+            font-size: 20px
+            line-height: 22.98px
+            margin-bottom: 3px
+            text-align: end
+            &:active,
+            &:visited,
+            &:hover
+                color: #ffffff
+                
+        &__mail 
+            display: block
+            +u_normal
+            font-size: 14px
+            line-height: 16.09px
+            color: #D7D7D7
+            text-align: end
+            &:active,
+            &:visited,
+            &:hover
+                color:  #D7D7D7
+
+        &__link
+            +links
+            text-decoration: none
+            font-size: 12px
+            +u_normal
+            &::before
+                display: none
+            &_1
+                padding:  0
+                text-align: left
+            &_2
+                display: block
+                text-align: end
+        &__copyright
+            +u_normal
+            color: #979797
+            font-size: 12px
+            line-height: 17.76px
+
+.send 
+    display: flex
+    &__input 
+        padding: 16px 0px 16px 18px
+        font-size: 14px
+        +u_light
+        background: #363636
+        color: #6D6D6D
+    &__button 
+        padding: 12px
+        background: $pink

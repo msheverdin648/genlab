@@ -1,0 +1,142 @@
+@import 'fonts'
+
+
+.header 
+    background: url('../../img/header-rectangle-small.svg'), url('../../img/header-bg-1.svg')
+    background-repeat: no-repeat
+    background-size: 12%, cover
+    background-position: 4% 40%, center center
+    &__slider 
+
+        &__item 
+            flex: 1 1 auto
+            padding: 65px 0 57px 0
+            background-repeat: no-repeat, no-repeat, no-repeat no-repeat !important
+            background-position: 100% 100%, 90% 45%, 0 40%, 50% 50% !important
+
+            &__content 
+
+                &__navigate 
+                    display: flex
+                    justify-content: space-between
+                    align-items: center
+
+                    &__next
+                        font-size: 12px
+                        color: $pink
+                        text-decoration: underline
+                        +u_normal
+                &__header
+                    margin-top: 180px
+                    +vol_normal
+                    color: #252525
+                    font-size: 52px
+                    line-height: 121%
+                    max-width: 65%
+
+                &__text
+                    +u_light_italic
+                    font-size: 16px
+                    max-width: 50%
+                    line-height: 23.68px
+                    margin: 29px 0 35px 0
+                &__button
+                    display: inline-block
+                    color: #ffffff
+                    background: $pink
+                    font-size: 15px
+                    +u_bold
+                    padding: 16px 40px
+                    &:visited,
+                    &:active,
+                    &:hover
+                        color: #ffffff
+                &__link
+                    position: relative
+                    display: block
+                    margin-top: 124px
+                    +u_medium
+                    color: $pink
+                    font-size: 14px
+                    line-height: 19px
+                    text-decoration-line: underline
+                    max-width: 30%
+                    padding: 0 0 0 30px
+                    &:visited,
+                    &:active,
+                    &:hover
+                        color: $pink
+                    &::before
+                        content: ""
+                        position: absolute
+                        top: 0
+                        left: 0
+                        width: 20px 
+                        height: 100%
+                        background: url('../../img/next-arrow.svg') center no-repeat 
+
+
+.num
+    +vol_normal
+    font-size: 27px
+    line-height: 38px
+    &__this
+        color: $pink
+        font-size: 27px
+    &__all
+        font-size: 23px
+                    
+                        
+
+
+.slick
+    &-arrows
+        position: absolute
+        
+    &-dots
+        display: none !important
+        
+    &-track
+    &-prev
+        position: absolute
+        top: 70px 
+        left: 0
+        background-color: transparent
+        color: $pink
+        text-decoration: underline
+        transform: translateY(70%)
+        padding-left: 50px
+        &::before
+            content: ""
+            position: absolute
+            top: 0
+            left: 0
+            width: 20px 
+            height: 100%
+            background: url('../../img/next-arrow.svg') center no-repeat 
+            transform: translateX(100%) rotate(180deg)
+
+
+    &-next
+        position: absolute
+        top: 70px 
+        right: 0
+        background-color: transparent
+        color: $pink
+        text-decoration: underline
+        transform: translateY(70%)
+        padding-right: 10px
+        &::before
+            content: ""
+            position: absolute
+            top: 0
+            right: 0
+            width: 20px 
+            height: 100%
+            background: url('../../img/next-arrow.svg') center no-repeat 
+            transform: translateX(100%)
+
+                
+            
+        
+

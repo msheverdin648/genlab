@@ -1,0 +1,56 @@
+
+
+.about
+    margin-bottom: 80px
+    &__header
+        +header_style
+        margin-bottom: 22px
+
+
+.feedback 
+    text-align: center
+    background: url('../../img/feedback-bg.png') center no-repeat
+    color: #ffffff
+    padding: 54px 0 61px 0
+    &__title 
+        +header_style
+        color: #ffffff
+        margin-bottom: 8px
+    &__subtitle 
+        +u_normal
+        font-size: 14px
+        line-height: 18.8px
+        margin-bottom: 46px
+
+#form
+    &__name
+        background: url('../../img/user.svg') right no-repeat
+    &__phone
+
+        background: url('../../img/telephone.svg') right no-repeat
+    &__email
+        background: url('../../img/mail.svg') right no-repeat
+
+    &__name,
+    &__phone,
+    &__email
+        background-position: 95% 50%
+
+.partners 
+    padding: 61px 0 92px 0
+    &__header   
+        +header_style
+        margin-bottom: 47px
+    &__slider 
+        display: flex
+    &__item 
+        padding: 0 10px
+        &__content
+            display: flex
+            justify-content: center
+            align-items: center
+            height: 120px
+                
+    &__navigate
+        @extend .news__navigate
+
