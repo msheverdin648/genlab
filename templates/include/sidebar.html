@@ -10,7 +10,8 @@
             <li class="sidebar__nav__item {% if url_home == request.path %} active {% endif %}">
                 <a href="{{url_home}}"><i class="fa fa-home" aria-hidden="true"></i><span class="sidebar__nav__item__text">Главная</span></a></li>
             {% url 'researches' as url_researches %}
-            <li class="sidebar__nav__item {% if url_researches == request.path %} active {% endif %}">
+            {% url 'research-type' slug=types.slug as url_research %}
+            <li class="sidebar__nav__item {% if url_researches == request.path or url_research == request.path  %} active {% endif %}">
                 <a href="{{url_researches}}"><i class="fas fa-microscope"></i><span class="sidebar__nav__item__text">Исследования</span></a></li>
             {% url 'questions' as url_questions %}  
             <li class="sidebar__nav__item {% if url_questions == request.path %} active {% endif %}">  

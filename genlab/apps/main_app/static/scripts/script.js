@@ -98,21 +98,6 @@ $(document).ready(function(){
 
 
 
-    $('.researches__list__item__header').on('click', function(){
-        if ($(this).hasClass('active')){
-            $(this).removeClass('active')
-            $(this).children().removeClass('active')
-            $(this).parent().removeClass('active')
-            $(this).parent().parent().removeClass('active')
-            $(this).siblings().slideUp()
-        }else{
-            $(this).addClass('active')
-            $(this).children().addClass('active')
-            $(this).parent().addClass('active')
-            $(this).parent().parent().addClass('active')
-            $(this).siblings().slideDown()
-        }
-    })
 
     $('.sublist__navigate').on('click', function(){
         if ($(this).hasClass('active')){
@@ -132,22 +117,25 @@ $(document).ready(function(){
 
 
 
-    $('.list__item__question').on('click', function(){
-            if ($(this).hasClass('active')){
-                $(this).removeClass('active')
-                $(this).children().removeClass('active')
-                $(this).parent().removeClass('active')
-                $(this).parent().parent().removeClass('active')
-                $(this).siblings().slideUp()
-            }else{
-                $(this).addClass('active')
-                $(this).children().addClass('active')
-                $(this).parent().addClass('active')
-                $(this).parent().parent().addClass('active')
-                $(this).siblings().slideDown()
+    
 
-            };
-    })
+
+    $('.list__header').on('click', function(){
+        if ($(this).hasClass('active')){
+            $(this).removeClass('active')
+            $(this).children().removeClass('active')
+            $(this).parent().removeClass('active')
+            $(this).parent().parent().removeClass('active')
+            $(this).siblings().slideUp()
+        }else{
+            $(this).addClass('active')
+            $(this).children().addClass('active')
+            $(this).parent().addClass('active')
+            $(this).parent().parent().addClass('active')
+            $(this).siblings().slideDown()
+
+        };
+})
 
 //Настройка сворачивания карточек
 
@@ -162,8 +150,5 @@ $(document).ready(function(){
     })
 
 
-    $(document).on('click', '.search__list__item', function() {
-        let q = $(this).text()
-        $('.search__item__input').val(q) 
-    });
+
 })

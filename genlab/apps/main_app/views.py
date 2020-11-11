@@ -35,6 +35,7 @@ class HomeView(View):
         questions = QuestionsAnswers.objects.filter(show_home=True)
         news = News.objects.all()
         main_researches = MainResearches.objects.all()
+        research_slugs = ResearchMethod.objects.all()
 
         return render(request, 'home.html', {
             'slides': slides,
@@ -42,6 +43,7 @@ class HomeView(View):
             'questions': questions,
             'news': news,
             'main_researches': main_researches,
+            'research_slugs': research_slugs,
         })
 
 
@@ -57,6 +59,16 @@ class ResearchesView(View):
         }
         return render(request, 'researches.html', context)
 
+class ResearchTypeView(View):
+
+    def get(self, request, *args, **kwargs):
+
+        types = ResearchType.objects.get(slug=kwargs.get('slug'))
+
+        context={
+            'types': types,
+        }
+        return render(request, 'research-type.html', context)
 
 class QuestionsView(View):
 
@@ -100,14 +112,13 @@ class Serach(View):
         search_list = []
         types = ResearchType.objects.filter(name__icontains = q)
         if types:
-            if q == " " or q == "" :
-                print("пусто")
-            else:
-                print("Вывод "+ q)
+            if not(q == " " or q == "") :
                 for b in types:
-                    new = {'type': b.name}
+                    new = {'type': b.name, 'slug': b.slug}
                     search_list.append(new)
                 return JsonResponse({'types': search_list}, safe=False)
+    
+
         
 
 

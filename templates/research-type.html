@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+
+    <div class="research-method">
+        <div class="container">
+            <div class="research-method__content">
+                <p class="research-method__label">
+                    {% if types.methods.count > 1 %}
+                        Исследования:
+                    {% else %}
+                        Исследование:
+                    {% endif %}
+                </p>
+               {% for method in types.methods.all  %}
+                    <div class="research-method__methods">
+                        <h2 class="research-method__research">
+                            {{method.name}}
+                        </h2>
+                        <div class="research-method__view">
+                            <p class="research-method__days">до {{method.period}} дней</p>
+                            <p class="research-method__price">{{method.price}} руб.</p>
+                            <a href="#" class="research-method__application">Заявка на анализ</a>
+                        </div>
+                    </div>
+               {% endfor %}
+                <ol class="list">
+                    <li class="list__item">
+                        <h3 class="research-method__list__header list__header">
+                            Описание
+                            <span class="research-method__list__navigate list__navigate">Подробнее</span>
+                        </h3>
+                        <div class="list__item__block hide">
+                            <p class="research-method__list__text list__text">
+                                {% if types.description %}
+                                {{types.description}}
+                                {% else %}
+                                    Информация временно отсутствует
+                                {% endif %}
+                            </p>
+                        </div>
+                    </li>
+                    <li class="list__item">
+                        <h3 class="research-method__list__header list__header">
+                            Что исследует?
+                            <span class="research-method__list__navigate list__navigate">Подробнее</span>
+                        </h3>
+                        <div class="list__item__block hide">
+                            <p class="research-method__list__text list__text">
+                                {% if types.about %}
+                                {{types.about}}
+                                {% else %}
+                                    Информация временно отсутствует
+                                {% endif %}
+                            </p>
+                        </div>
+                    </li>
+                    <li class="list__item">
+                        <h3 class="research-method__list__header list__header">
+                            Подготовка
+                            <span class="research-method__list__navigate list__navigate">Подробнее</span>
+                        </h3>
+                        <div class="list__item__block hide">
+                            <p class="research-method__list__text list__text">
+                               {% if types.preparation %}
+                               {{types.preparation}}
+                               {% else %}
+                                    Информация временно отсутствует
+                               {% endif %}
+                            </p>
+                        </div>
+                    </li>
+                    <li class="list__item">
+                        <h3 class="research-method__list__header list__header">
+                            Расшифровка
+                            <span class="research-method__list__navigate list__navigate">Подробнее</span>
+                        </h3>
+                        <div class="list__item__block hide">
+                            <p class="research-method__list__text list__text">
+                                {% if types.decryption %}
+                                    {{types.decryption}}
+                                {% else %}
+                                    Информация временно отсутствует
+                                {% endif %}
+                            </p>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+
+    {% include "include/steps.html" %}
+{% endblock %}

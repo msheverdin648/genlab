@@ -7,6 +7,7 @@
 @import 'footer'
 @import 'researches'
 @import 'cooperation'
+@import 'research-method'
 
 .wrapper
     display: flex
@@ -40,14 +41,13 @@
     visibility: hidden
 
 
-
-
-
-
-
-
+//Удалить после того как будут созданы все страницы
 .sorry
     font-size: 50px 
+
+
+
+
 
 .list
     counter-reset: li
@@ -61,6 +61,9 @@
             background: $pink
             border-top: 1px solid $pink
             border-bottom: 1px solid $pink
+        &__block
+            padding-left: 80px
+            max-width: 80%
         
     &__header
         padding-left: 80px
@@ -109,6 +112,13 @@
             color: #F6BDE1
             &::after
                 background: url('../../img/arrow-up.svg') center no-repeat
+    
+
+    &__text
+        color: #ffffff
+        +u_normal
+        font-size: 14px
+        line-height: 19.71px
 
 
 .sublist

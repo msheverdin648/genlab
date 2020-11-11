@@ -33,7 +33,7 @@
                     <h3 class="research__header">{{a.name}}</h3>
                     {% for b in a.types.all %}
                         <hr class="research__underline">
-                            <a href="{{b.slug}}" class="research__name">{{b.name}}</a>
+                            <a href="{% url 'research-type' slug=b.slug %}" class="research__name">{{b.name}}</a>
                         <hr class="research__underline">
                     {% endfor %}
 

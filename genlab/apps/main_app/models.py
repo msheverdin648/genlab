@@ -13,7 +13,11 @@ class ResearchMethod(models.Model):
     name = models.CharField(("Название метода"), max_length=500)
     period = models.IntegerField(("Срок исследования"))
     price = models.DecimalField(("Цена исследования"), max_digits=12, decimal_places=2)
-    slug = models.SlugField(("Ссылка метода"))
+    
+    
+
+
+
 
 
     def __str__(self):
@@ -31,6 +35,11 @@ class ResearchType(models.Model):
     
     name = models.CharField(("Название вида исследования"), max_length=500)
     methods = models.ManyToManyField(ResearchMethod, verbose_name=("Методы исследования"))
+    slug = models.SlugField(("Ссылка вида исследования"))
+    description = models.TextField(("Описание исследования"), null=True, blank=True)
+    about = models.TextField(("Что исследуется"), null=True, blank=True)
+    preparation = models.TextField(("Подготовка"), null=True, blank=True)
+    decryption = models.TextField(("Расшифровка"), null=True, blank=True)
 
     def __str__(self):
         return self.name

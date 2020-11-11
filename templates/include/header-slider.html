@@ -30,8 +30,12 @@
                             </div>
                             <h1 class="header__slider__item__content__header">{{slide.slide_header}}</h1>
                             <p class="header__slider__item__content__text">{{slide.slide_text}}</p>
-                            <a href="" class="header__slider__item__content__button">{{slide.button_text}}</a>
-                            <a href="" class="header__slider__item__content__link">{{slide.link_text}}</a>
+                            {% if slide.button_text %}
+                                <a href="{{slide.button_link}}" class="header__slider__item__content__button">{{slide.button_text}}</a>
+                            {% endif %}
+                            {% if slide.link_text %}
+                                <a href="{{slide.link_url}}" class="header__slider__item__content__link">{{slide.link_text}}</a>
+                            {% endif %}
                         </div>
                     </div>
                {% endfor %}

@@ -12,7 +12,7 @@ $(document).ready(function(){
 
     for (let index = 0; index < range; index++) {
       $('.search__list').append(
-        '<li class="search__list__item">' + response.types[index].type + '</li>'    
+        '<li class="search__list__item"><a class="search__list__link" href="/research/'+ response.types[index].slug + '">' + response.types[index].type + '</a></li>'    
       )
     }
   }

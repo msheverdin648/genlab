@@ -41,6 +41,7 @@
             color: #ffffff
             border: 2px solid #FFFFFF
             +u_bold
+        
     &__description 
         font-size: 12px
         +u_light
@@ -58,7 +59,7 @@
         z-index: 20
         &__item
             display: block
-            padding: 10px 10px
+            padding: 0px 10px
             +u_light
             margin-bottom: 2px
             &:hover
@@ -68,6 +69,17 @@
                 &:hover
                     cursor: default
                     background: $pink
+        &__link
+            display: block
+            +u_medium
+            color: #ffffff
+            font-size: 14px
+            line-height: 19px
+            padding: 10px 0
+            &:visited,
+            &:active,
+            &:hover
+                color: #ffffff
 
 
 .researches 
