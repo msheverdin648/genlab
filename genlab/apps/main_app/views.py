@@ -117,6 +117,18 @@ class Serach(View):
                     new = {'type': b.name, 'slug': b.slug}
                     search_list.append(new)
                 return JsonResponse({'types': search_list}, safe=False)
+
+class SerachType(View):
+
+    def get(self, request):
+        q = request.GET.get('q')
+        types = ResearchType.objects.filter(name__icontains = q).first()
+
+        context = {
+            'types': types,
+        }
+
+        return render(request, 'research-type.html', context)
     
 
         

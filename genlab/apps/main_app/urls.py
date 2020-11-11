@@ -10,7 +10,7 @@ urlpatterns = [
     path('questions/', views.QuestionsView.as_view(), name='questions' ),
     path('cooperations/', views.CooperationView.as_view(), name='cooperation' ),
     path('search.json/', views.Serach.as_view(), name='search' ),
-
+    path('search/', views.SerachType.as_view(), name='search-type' ),
 
     path('NotFound/', views.SorryView.as_view(), name='sorry' ),
 ]
