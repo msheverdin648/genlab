@@ -12,10 +12,10 @@
             <p class="search__text">Введите ее название в строку поиска, чтобы найти нужное исследование</p>
             <form method="GET" class="search__item" data-url="{% url 'search' %}" id="search" action="{% url 'search-type' %}">
                 <input type="text" placeholder="Поиск исследования" class="search__item__input" name="q" autocomplete="off">
-                <button class="search__item__button">
+                <button class="search__item__button" type="submit">
                     Найти исследование
                 </button>
-                <ul class="search__list">
+                <ul class="search__list ">
                 </ul>
             </form>
             <p class="search__description">Например: ПГТ хромосомных анеуплоидий</p>

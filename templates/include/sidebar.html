@@ -1,59 +1,63 @@
 {% load static %}
 
 
-<div class="sidebar">
-    <span class="sidebar__open"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
-    <div class="sidebar__container">
-        <div class="sidebar__logo"><img src="{% static 'img/sidebar-logo.svg' %}" alt=""></div>
-        <ul class="sidebar__nav">
-            {% url 'home' as url_home %}
-            <li class="sidebar__nav__item {% if url_home == request.path %} active {% endif %}">
-                <a href="{{url_home}}"><i class="fa fa-home" aria-hidden="true"></i><span class="sidebar__nav__item__text">Главная</span></a></li>
-            {% url 'researches' as url_researches %}
-            {% url 'research-type' slug=types.slug as url_research %}
-            <li class="sidebar__nav__item {% if url_researches == request.path or url_research == request.path  %} active {% endif %}">
-                <a href="{{url_researches}}"><i class="fas fa-microscope"></i><span class="sidebar__nav__item__text">Исследования</span></a></li>
-            {% url 'questions' as url_questions %}  
-            <li class="sidebar__nav__item {% if url_questions == request.path %} active {% endif %}">  
-                <a href="{{url_questions}}"><i class="fas fa-flask"></i><span class="sidebar__nav__item__text">Как сдать анализы</span></a></li>
-            {% url 'sorry' as url_sorry %}  
-            <li class="sidebar__nav__item  ">
-                <a href="{{url_sorry}}"><i class="fa fa-info-circle" aria-hidden="true"></i><span class="sidebar__nav__item__text">О нас</span></a></li>
-            {% url 'cooperation' as url_cooperation %}
-            <li class="sidebar__nav__item {% if url_cooperation == request.path %} active {% endif %}">
-                <a href="{{url_cooperation}}"><i class="fa fa-handshake-o" aria-hidden="false"></i><span class="sidebar__nav__item__text">Сотрудничество</span></a></li>
-            <li class="sidebar__nav__item " >
-                <a href="{{url_sorry}} "><i class="fa fa-pencil" aria-hidden="true"></i><span class="sidebar__nav__item__text">Контакты</span></a></li>
-            <li class="sidebar__nav__item ">
-                <a href="{{url_sorry}}"><i class="fa fa-user" aria-hidden="true"></i><span class="sidebar__nav__item__text">Личный кабинет</span></a></li>
-        </ul>
-        <div class="sidebar__search">
-            <p class="sidebar__search__text">Поиск по сайту:</p>
-            <div class="sidebar__search__input">
-                <input type="text" class="sidebar__search__input__item" placeholder="Что интересует?"><button class="sidebar__search__input__button">
-                    <i class="fa fa-search" aria-hidden="true"></i>
-                </button>
-            </div>
-        </div>
-    </div>
-    <div class="sidebar__contacts">
+<div class="sidebsar__column">
+    <div class="sidebar">
+        <span class="sidebar__open"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
         <div class="sidebar__container">
-            <div class="sidebar__contacts__full">
-                <p class="sidebar__contacts__text">Наши контакты:</p>
-                <h3 class="sidebar__contacts__phone">+998 001 001 001</h3>
-                <p class="sidebar__contacts__email">info@1glab.com</p>
-                <p class="sidebar__contacts__text">Адрес лаборатории:</p>
-                <p class="sidebar__contacts__address">
-                    Узбекистан, г.Ташкент,
-                    ул. Восточная 43, офис №11
-                </p>
+            <div class="sidebar__logo"><img src="{% static 'img/sidebar-logo.svg' %}" alt=""></div>
+            <ul class="sidebar__nav">
+                {% url 'home' as url_home %}
+                <li class="sidebar__nav__item {% if url_home == request.path %} active {% endif %}">
+                    <a href="{{url_home}}"><i class="fa fa-home" aria-hidden="true"></i><span class="sidebar__nav__item__text">Главная</span></a></li>
+                {% url 'researches' as url_researches %}
+                {% url 'research-type' slug=types.slug as url_research %}
+                <li class="sidebar__nav__item {% if url_researches == request.path or url_research == request.path  %} active {% endif %}">
+                    <a href="{{url_researches}}"><i class="fas fa-microscope"></i><span class="sidebar__nav__item__text">Исследования</span></a></li>
+                {% url 'questions' as url_questions %}  
+                <li class="sidebar__nav__item {% if url_questions == request.path %} active {% endif %}">  
+                    <a href="{{url_questions}}"><i class="fas fa-flask"></i><span class="sidebar__nav__item__text">Как сдать анализы</span></a></li>
+                {% url 'sorry' as url_sorry %}  
+                <li class="sidebar__nav__item  ">
+                    <a href="{{url_sorry}}"><i class="fa fa-info-circle" aria-hidden="true"></i><span class="sidebar__nav__item__text">О нас</span></a></li>
+                {% url 'cooperation' as url_cooperation %}
+                <li class="sidebar__nav__item {% if url_cooperation == request.path %} active {% endif %}">
+                    <a href="{{url_cooperation}}"><i class="fa fa-handshake-o" aria-hidden="false"></i><span class="sidebar__nav__item__text">Сотрудничество</span></a></li>
+                <li class="sidebar__nav__item " >
+                    <a href="#footer"><i class="fa fa-pencil" aria-hidden="true"></i><span class="sidebar__nav__item__text">Контакты</span></a></li>
+                <li class="sidebar__nav__item ">
+                    <a href="{{url_sorry}}"><i class="fa fa-user" aria-hidden="true"></i><span class="sidebar__nav__item__text">Личный кабинет</span></a></li>
+            </ul>
+            <div class="sidebar__search">
+                <p class="sidebar__search__text">Поиск по сайту:</p>
+                <form class="sidebar__search__input" data-url="{% url 'search' %}" action="{% url 'search-type' %}" id="sidebar-search">
+                    <input type="text" class="sidebar__search__input__item" placeholder="Что интересует?" name="q" autocomplete="off"><button class="sidebar__search__input__button" type="submit">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </button>
+                    <ul class="search__list sidebar__list">
+                    </ul>
+                </form>
             </div>
-            
         </div>
-        <div class="sidebar__contacts__small">
-            <h2 class="sidebar__contacts__small__text">
-                Контакты
-            </h2>
+        <div class="sidebar__contacts">
+            <div class="sidebar__container">
+                <div class="sidebar__contacts__full">
+                    <p class="sidebar__contacts__text">Наши контакты:</p>
+                    <h3 class="sidebar__contacts__phone">+998 001 001 001</h3>
+                    <p class="sidebar__contacts__email">info@1glab.com</p>
+                    <p class="sidebar__contacts__text">Адрес лаборатории:</p>
+                    <p class="sidebar__contacts__address">
+                        Узбекистан, г.Ташкент,
+                        ул. Восточная 43, офис №11
+                    </p>
+                </div>
+                
+            </div>
+            <div class="sidebar__contacts__small">
+                <h2 class="sidebar__contacts__small__text">
+                    Контакты
+                </h2>
+            </div>
         </div>
     </div>
 </div>
