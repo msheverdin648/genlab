@@ -127,13 +127,19 @@ $(document).ready(function(){
             $(this).parent().removeClass('active')
             $(this).parent().parent().removeClass('active')
             $(this).siblings().slideUp()
+            
         }else{
             $(this).addClass('active')
             $(this).children().addClass('active')
             $(this).parent().addClass('active')
             $(this).parent().parent().addClass('active')
+            $(this).slideDown()
             $(this).siblings().slideDown()
-
+            $(this).parent().siblings().children('.list__item__answer').slideUp()
+            $(this).parent().siblings().children('.sublist').slideUp()
+            $(this).parent().siblings().children('.list__header').removeClass('active')
+            $(this).parent().siblings().children('.list__header').children().removeClass('active')
+            $(this).parent().siblings().removeClass('active')
         };
 })
 

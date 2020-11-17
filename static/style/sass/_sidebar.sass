@@ -1,13 +1,14 @@
 @import 'color'
     
 .sidebar
-    position: relative
+    position: sticky
     max-width: 320px
     background: #FFFFFF
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08)
     top: 0
     left: 0
     padding: 0 30px
+    margin: -20px 0 0 0 
 
     &.active
         text-align: center
@@ -122,15 +123,16 @@
             font-size: 15px
         &__input
             margin-bottom: 26px
+            position: relative
             &__item
                 border: 1px solid #E0E0E0
                 padding: 13px 70px 12px 15px
             &__button
                 background: $pink
                 color: #ffffff
-                padding: 13px
+                padding: 12px
                 border: 1px solid $pink
-                font-size: 15px
+                font-size: 14px
             &__button
                 display: inline-block
     &__contacts
@@ -153,3 +155,5 @@
             max-width: 190px
         &__small
             display: none
+    &__list
+        width: 100%

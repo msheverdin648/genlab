@@ -1,225 +1,4 @@
 @charset "UTF-8";
-.sidebar {
-  position: relative;
-  max-width: 320px;
-  background: #FFFFFF;
-  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
-          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
-  top: 0;
-  left: 0;
-  padding: 0 30px;
-}
-
-.sidebar.active {
-  text-align: center;
-  padding: 15px;
-}
-
-.sidebar.active .sidebar__container {
-  max-width: 100%;
-  margin: 0;
-}
-
-.sidebar.active .sidebar__logo {
-  background: url("../../img/small-logo.svg");
-  width: 66px;
-  height: 64px;
-}
-
-.sidebar.active .sidebar__logo img {
-  opacity: 0;
-  display: none;
-}
-
-.sidebar.active .sidebar__nav__item::before {
-  left: -23%;
-}
-
-.sidebar.active .sidebar__nav__item__text {
-  opacity: 0;
-  display: none;
-}
-
-.sidebar.active .sidebar__open i {
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
-}
-
-.sidebar.active .sidebar__search__text {
-  display: none;
-}
-
-.sidebar.active .sidebar__search__input__item {
-  display: none;
-}
-
-.sidebar.active .sidebar__search__input__button {
-  background: #fff;
-  color: #000000;
-  border: none;
-  padding: 0;
-  margin-top: 72px;
-}
-
-.sidebar.active .sidebar__contacts {
-  position: relative;
-  top: 15px;
-  left: 0;
-  margin: 0 -15px;
-  padding: 99.5px 0;
-}
-
-.sidebar.active .sidebar__contacts__full {
-  display: none;
-}
-
-.sidebar.active .sidebar__contacts__small {
-  display: block;
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
-}
-
-.sidebar.active .sidebar__contacts__small__text {
-  font-size: 14px;
-  font-weight: 500;
-  text-transform: uppercase;
-  text-align: center;
-  line-height: 16px;
-}
-
-.sidebar__open {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: absolute;
-  right: 0;
-  top: 385px;
-  background: #FFFFFF;
-  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
-          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
-  border-radius: 0px 16px 16px 0px;
-  width: 9px;
-  height: 70px;
-  z-index: 20;
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
-}
-
-.sidebar__open i {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-}
-
-.sidebar__open:hover {
-  cursor: pointer;
-}
-
-.sidebar__container {
-  max-width: 260px;
-  margin: 0 auto;
-}
-
-.sidebar__logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-top: 19px;
-}
-
-.sidebar__nav__item {
-  color: #383838;
-  padding: 16.5px 0;
-  position: relative;
-}
-
-.sidebar__nav__item i {
-  margin-right: 11px;
-}
-
-.sidebar__nav__item.active a {
-  color: #BB669B;
-}
-
-.sidebar__nav__item.active i {
-  margin-right: 18px;
-}
-
-.sidebar__nav__item.active::before {
-  content: "";
-  display: block;
-  position: absolute;
-  background: #BB669B;
-  height: 26px;
-  width: 5px;
-  top: 25%;
-  left: -12%;
-}
-
-.sidebar__search__text {
-  margin-bottom: 8px;
-  color: #414141;
-  font-size: 15px;
-}
-
-.sidebar__search__input {
-  margin-bottom: 26px;
-}
-
-.sidebar__search__input__item {
-  border: 1px solid #E0E0E0;
-  padding: 13px 70px 12px 15px;
-}
-
-.sidebar__search__input__button {
-  background: #BB669B;
-  color: #ffffff;
-  padding: 13px;
-  border: 1px solid #BB669B;
-  font-size: 15px;
-}
-
-.sidebar__search__input__button {
-  display: inline-block;
-}
-
-.sidebar__contacts {
-  background-color: #BB669B;
-  color: #ffffff;
-  padding: 28px 0;
-  margin: 0 -30px;
-}
-
-.sidebar__contacts__text {
-  margin-bottom: 11px;
-  font-size: 13px;
-}
-
-.sidebar__contacts__phone {
-  margin-bottom: 7px;
-  font-size: 20px;
-  font-weight: 700;
-}
-
-.sidebar__contacts__email {
-  margin-bottom: 23px;
-}
-
-.sidebar__contacts__address {
-  font-size: 14px;
-  line-height: 18.9px;
-  max-width: 190px;
-}
-
-.sidebar__contacts__small {
-  display: none;
-}
-
 @font-face {
   font-family: 'Ubuntu';
   src: local("Ubuntu Light"), local("Ubuntu-Light"), url("../../fonts/ubuntulight.woff2") format("woff2"), url("../../fonts/ubuntulight.woff") format("woff"), url("../../fonts/ubuntulight.ttf") format("truetype");
@@ -1212,169 +991,6 @@
           transform: translateY(-350%);
 }
 
-.footer {
-  padding: 41px 0 31px 0;
-  background: #2E2E2E;
-}
-
-.row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.row:first-child {
-  margin-bottom: 57px;
-}
-
-.row__column {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 25%;
-          flex: 1 1 25%;
-}
-
-.row__column:nth-child(2) {
-  text-align: center;
-}
-
-.row__column__title {
-  color: #D7D7D7;
-  font-family: 'Ubuntu';
-  font-weight: 400;
-  font-style: normal;
-  font-size: 14px;
-  line-height: 17.77px;
-  margin-bottom: 10px;
-}
-
-.row__column__socials {
-  font-size: 25px;
-}
-
-.row__column__socials i {
-  color: #ffffff;
-}
-
-.row__column__socials a:nth-child(2) {
-  margin: 0 14px;
-}
-
-.row__column__adress {
-  font-family: 'Ubuntu';
-  font-weight: 500;
-  font-style: normal;
-  font-size: 14px;
-  line-height: 18.9px;
-  color: #ffffff;
-}
-
-.row__column__phone {
-  display: block;
-  color: #ffffff;
-  font-family: 'Ubuntu';
-  font-weight: 700;
-  font-style: normal;
-  font-size: 20px;
-  line-height: 22.98px;
-  margin-bottom: 3px;
-  text-align: end;
-}
-
-.row__column__phone:active, .row__column__phone:visited, .row__column__phone:hover {
-  color: #ffffff;
-}
-
-.row__column__mail {
-  display: block;
-  font-family: 'Ubuntu';
-  font-weight: 400;
-  font-style: normal;
-  font-size: 14px;
-  line-height: 16.09px;
-  color: #D7D7D7;
-  text-align: end;
-}
-
-.row__column__mail:active, .row__column__mail:visited, .row__column__mail:hover {
-  color: #D7D7D7;
-}
-
-.row__column__link {
-  position: relative;
-  font-family: 'Ubuntu';
-  font-weight: 500;
-  font-style: normal;
-  color: #BB669B;
-  font-size: 14px;
-  line-height: 19px;
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
-  padding: 0 0 0 30px;
-  text-decoration: none;
-  font-size: 12px;
-  font-family: 'Ubuntu';
-  font-weight: 400;
-  font-style: normal;
-}
-
-.row__column__link:visited, .row__column__link:active, .row__column__link:hover {
-  color: #BB669B;
-}
-
-.row__column__link::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 20px;
-  height: 100%;
-  background: url("../../img/next-arrow.svg") center no-repeat;
-}
-
-.row__column__link::before {
-  display: none;
-}
-
-.row__column__link_1 {
-  padding: 0;
-  text-align: left;
-}
-
-.row__column__link_2 {
-  display: block;
-  text-align: end;
-}
-
-.row__column__copyright {
-  font-family: 'Ubuntu';
-  font-weight: 400;
-  font-style: normal;
-  color: #979797;
-  font-size: 12px;
-  line-height: 17.76px;
-}
-
-.send {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.send__input {
-  padding: 16px 0px 16px 18px;
-  font-size: 14px;
-  font-family: 'Ubuntu';
-  font-weight: 300;
-  font-style: normal;
-  background: #363636;
-  color: #6D6D6D;
-}
-
-.send__button {
-  padding: 12px;
-  background: #BB669B;
-}
-
 .researches__header {
   font-family: 'Vollkorn';
   font-weight: 700;
@@ -1636,6 +1252,397 @@
 
 .research-method__application:visited, .research-method__application:active, .research-method__application:hover {
   color: #ffffff;
+}
+
+.sidebar {
+  position: -webkit-sticky;
+  position: sticky;
+  max-width: 320px;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
+  top: 0;
+  left: 0;
+  padding: 0 30px;
+  margin: -20px 0 0 0;
+}
+
+.sidebar.active {
+  text-align: center;
+  padding: 15px;
+}
+
+.sidebar.active .sidebar__container {
+  max-width: 100%;
+  margin: 0;
+}
+
+.sidebar.active .sidebar__logo {
+  background: url("../../img/small-logo.svg");
+  width: 66px;
+  height: 64px;
+}
+
+.sidebar.active .sidebar__logo img {
+  opacity: 0;
+  display: none;
+}
+
+.sidebar.active .sidebar__nav__item::before {
+  left: -23%;
+}
+
+.sidebar.active .sidebar__nav__item__text {
+  opacity: 0;
+  display: none;
+}
+
+.sidebar.active .sidebar__open i {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.sidebar.active .sidebar__search__text {
+  display: none;
+}
+
+.sidebar.active .sidebar__search__input__item {
+  display: none;
+}
+
+.sidebar.active .sidebar__search__input__button {
+  background: #fff;
+  color: #000000;
+  border: none;
+  padding: 0;
+  margin-top: 72px;
+}
+
+.sidebar.active .sidebar__contacts {
+  position: relative;
+  top: 15px;
+  left: 0;
+  margin: 0 -15px;
+  padding: 99.5px 0;
+}
+
+.sidebar.active .sidebar__contacts__full {
+  display: none;
+}
+
+.sidebar.active .sidebar__contacts__small {
+  display: block;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.sidebar.active .sidebar__contacts__small__text {
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 16px;
+}
+
+.sidebar__open {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  right: 0;
+  top: 385px;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
+  border-radius: 0px 16px 16px 0px;
+  width: 9px;
+  height: 70px;
+  z-index: 20;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.sidebar__open i {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.sidebar__open:hover {
+  cursor: pointer;
+}
+
+.sidebar__container {
+  max-width: 260px;
+  margin: 0 auto;
+}
+
+.sidebar__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 19px;
+}
+
+.sidebar__nav__item {
+  color: #383838;
+  padding: 16.5px 0;
+  position: relative;
+}
+
+.sidebar__nav__item i {
+  margin-right: 11px;
+}
+
+.sidebar__nav__item.active a {
+  color: #BB669B;
+}
+
+.sidebar__nav__item.active i {
+  margin-right: 18px;
+}
+
+.sidebar__nav__item.active::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background: #BB669B;
+  height: 26px;
+  width: 5px;
+  top: 25%;
+  left: -12%;
+}
+
+.sidebar__search__text {
+  margin-bottom: 8px;
+  color: #414141;
+  font-size: 15px;
+}
+
+.sidebar__search__input {
+  margin-bottom: 26px;
+  position: relative;
+}
+
+.sidebar__search__input__item {
+  border: 1px solid #E0E0E0;
+  padding: 13px 70px 12px 15px;
+}
+
+.sidebar__search__input__button {
+  background: #BB669B;
+  color: #ffffff;
+  padding: 12px;
+  border: 1px solid #BB669B;
+  font-size: 14px;
+}
+
+.sidebar__search__input__button {
+  display: inline-block;
+}
+
+.sidebar__contacts {
+  background-color: #BB669B;
+  color: #ffffff;
+  padding: 28px 0;
+  margin: 0 -30px;
+}
+
+.sidebar__contacts__text {
+  margin-bottom: 11px;
+  font-size: 13px;
+}
+
+.sidebar__contacts__phone {
+  margin-bottom: 7px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.sidebar__contacts__email {
+  margin-bottom: 23px;
+}
+
+.sidebar__contacts__address {
+  font-size: 14px;
+  line-height: 18.9px;
+  max-width: 190px;
+}
+
+.sidebar__contacts__small {
+  display: none;
+}
+
+.sidebar__list {
+  width: 100%;
+}
+
+.footer {
+  padding: 41px 0 31px 0;
+  background: #2E2E2E;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.row:first-child {
+  margin-bottom: 57px;
+}
+
+.row__column {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 25%;
+          flex: 1 1 25%;
+}
+
+.row__column:nth-child(2) {
+  text-align: center;
+}
+
+.row__column__title {
+  color: #D7D7D7;
+  font-family: 'Ubuntu';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 17.77px;
+  margin-bottom: 10px;
+}
+
+.row__column__socials {
+  font-size: 25px;
+}
+
+.row__column__socials i {
+  color: #ffffff;
+}
+
+.row__column__socials a:nth-child(2) {
+  margin: 0 14px;
+}
+
+.row__column__adress {
+  font-family: 'Ubuntu';
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 18.9px;
+  color: #ffffff;
+}
+
+.row__column__phone {
+  display: block;
+  color: #ffffff;
+  font-family: 'Ubuntu';
+  font-weight: 700;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 22.98px;
+  margin-bottom: 3px;
+  text-align: end;
+}
+
+.row__column__phone:active, .row__column__phone:visited, .row__column__phone:hover {
+  color: #ffffff;
+}
+
+.row__column__mail {
+  display: block;
+  font-family: 'Ubuntu';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 16.09px;
+  color: #D7D7D7;
+  text-align: end;
+}
+
+.row__column__mail:active, .row__column__mail:visited, .row__column__mail:hover {
+  color: #D7D7D7;
+}
+
+.row__column__link {
+  position: relative;
+  font-family: 'Ubuntu';
+  font-weight: 500;
+  font-style: normal;
+  color: #BB669B;
+  font-size: 14px;
+  line-height: 19px;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  padding: 0 0 0 30px;
+  text-decoration: none;
+  font-size: 12px;
+  font-family: 'Ubuntu';
+  font-weight: 400;
+  font-style: normal;
+}
+
+.row__column__link:visited, .row__column__link:active, .row__column__link:hover {
+  color: #BB669B;
+}
+
+.row__column__link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 100%;
+  background: url("../../img/next-arrow.svg") center no-repeat;
+}
+
+.row__column__link::before {
+  display: none;
+}
+
+.row__column__link_1 {
+  padding: 0;
+  text-align: left;
+}
+
+.row__column__link_2 {
+  display: block;
+  text-align: end;
+}
+
+.row__column__copyright {
+  font-family: 'Ubuntu';
+  font-weight: 400;
+  font-style: normal;
+  color: #979797;
+  font-size: 12px;
+  line-height: 17.76px;
+}
+
+.send {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.send__input {
+  padding: 16px 0px 16px 18px;
+  font-size: 14px;
+  font-family: 'Ubuntu';
+  font-weight: 300;
+  font-style: normal;
+  background: #363636;
+  color: #6D6D6D;
+}
+
+.send__button {
+  padding: 12px;
+  background: #BB669B;
 }
 
 .wrapper {
