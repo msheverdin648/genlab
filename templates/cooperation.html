@@ -31,29 +31,31 @@
 
     <!--Блок с обратной связью-->
         <div class="feedback">
+            
             <div class="container">
                 <h2 class="feedback__title">Остались вопросы или предложения?</h2>
                 <h3 class="feedback__subtitle">
                     Заполните заявку на обратную связь с нами, и мы свяжемся с Вами в ближайшее время
                 </h3>
-                <form action="" method="POST" class="feedback__form form">
+                <form action="{% url 'feedback' %}" method="POST" class="feedback__form form">
+                    {% csrf_token %}
                     <div class="form__row form__row_inputs">
                         <div class="form__column">
                             <label for="form__name" class="form__label">Введите Ваше имя:</label>
-                            <input type="text" class="form__input" id="form__name" name="name" placeholder="Иванов Иван">
+                            <input type="text" class="form__input" id="form__name" name="name" placeholder="Иванов Иван" required>
                         </div>
                         <div class="form__column">
                             <label for="form__phone" class="form__label">Ваш номер телефона:</label>
-                            <input type="tel" class="form__input" id="form__phone" name="phone" placeholder="+7 (906) 222 - 33 - 44">
+                            <input type="tel" class="form__input" id="form__phone" name="phone" placeholder="+7 (906) 222 - 33 - 44" required>
         
                         </div>
                         <div class="form__column">
                             <label for="form__email" class="form__label">Ваш e-mail:</label>
-                            <input type="" class="form__input" id="form__email" name="email" placeholder="example@mail.com">
+                            <input type="email" class="form__input" id="form__email" name="email" placeholder="example@mail.com" required>
                         </div>
                     </div>
                     <div class="form__row form__row_check">
-                        <input type="checkbox" class="form__checkbox" id="form__personal">
+                        <input type="checkbox" class="form__checkbox" id="form__personal" required>
                         <label for="form__personal" class="checkbox__label">Вы принимаете условия обеспечения  <a href="#" class="link">конфиденциальности персональных</a> данных</label>
                     </div>
                     <div class="form__row form__row_button">

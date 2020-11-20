@@ -168,3 +168,20 @@ class News(models.Model):
     def __str__(self):
         return self.title
 
+
+class Feedback(models.Model):
+
+    
+
+    class Meta:
+        verbose_name = ("Заявка на обратную связь")
+        verbose_name_plural = ("Заявки на обратную связь")
+
+    def __str__(self):
+        return f'ФИО: {self.name}, телефон: {self.phone}, email: {self.email}'
+
+    name = models.CharField(("ФИО пользователя"), max_length=150)
+    phone = models.CharField(("Номер телефона"),  max_length=150)
+    email = models.EmailField(("Почта пользователя"), max_length=254)
+
+

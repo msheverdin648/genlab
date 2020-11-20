@@ -9,6 +9,7 @@ from .models import (
     About,
     Partners,
     News,
+    Feedback,
     )
 
 
@@ -22,3 +23,4 @@ admin.site.register(QuestionsAnswers)
 admin.site.register(About)
 admin.site.register(Partners)
 admin.site.register(News)
+admin.site.register(Feedback)

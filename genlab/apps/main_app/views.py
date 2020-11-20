@@ -14,7 +14,7 @@ from .models import (
     About,
     Partners,
     News,
-
+    Feedback,
     )
 
 
@@ -129,6 +129,18 @@ class SerachType(View):
         }
 
         return render(request, 'research-type.html', context)
+
+class FeedbackView(View):
+
+    def post(self, request, *args, **kwargs):
+        email = request.POST.get('email')
+        user_phone = request.POST.get('phone')
+        author = request.POST.get('name')
+        message = Feedback.objects.create(
+            name=author, email=email, phone=user_phone
+        )
+        message.save()
+        return HttpResponseRedirect('/cooperations/')
     
 
         

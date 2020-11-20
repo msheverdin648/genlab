@@ -35,13 +35,18 @@
                         <div class="list__item__block hide">
                             <p class="research-method__list__text list__text">
                                 {% if types.description %}
-                                {{types.description}}
+                                    {%  with types.description as words %}
+                                        <p class="list__text">{{words|truncatewords:100|slice:':-3' }} <span class="dots">...</span>
+                                            <span class=" list__text--hide_text hide ">{{words }}</span>
+                                            <button class="open-button"></button> </p>
+                                    {% endwith %}
                                 {% else %}
                                     Информация временно отсутствует
                                 {% endif %}
                             </p>
                         </div>
                     </li>
+                    
                     <li class="list__item">
                         <h3 class="research-method__list__header list__header">
                             Что исследует?
@@ -50,7 +55,11 @@
                         <div class="list__item__block hide">
                             <p class="research-method__list__text list__text">
                                 {% if types.about %}
-                                {{types.about}}
+                                    {%  with types.about as words %}
+                                            <p class="list__text">{{words|truncatewords:100|slice:':-3' }} <span class="dots">...</span>
+                                                <span class=" list__text--hide_text hide ">{{words }}</span>
+                                                <button class="open-button"></button> </p>
+                                    {% endwith %}
                                 {% else %}
                                     Информация временно отсутствует
                                 {% endif %}
@@ -65,7 +74,11 @@
                         <div class="list__item__block hide">
                             <p class="research-method__list__text list__text">
                                {% if types.preparation %}
-                               {{types.preparation}}
+                                    {%  with types.about as preparation %}
+                                        <p class="list__text">{{words|truncatewords:100|slice:':-3' }} <span class="dots">...</span>
+                                        <span class=" list__text--hide_text hide ">{{words }}</span>
+                                        <button class="open-button"></button> </p>
+                                    {% endwith %}
                                {% else %}
                                     Информация временно отсутствует
                                {% endif %}
@@ -80,7 +93,11 @@
                         <div class="list__item__block hide">
                             <p class="research-method__list__text list__text">
                                 {% if types.decryption %}
-                                    {{types.decryption}}
+                                    {%  with types.about as decryption %}
+                                        <p class="list__text">{{words|truncatewords:100|slice:':-3' }} <span class="dots">...</span>
+                                        <span class=" list__text--hide_text hide ">{{words }}</span>
+                                        <button class="open-button"></button> </p>
+                                    {% endwith %}
                                 {% else %}
                                     Информация временно отсутствует
                                 {% endif %}

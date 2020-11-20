@@ -157,4 +157,11 @@ $(document).ready(function(){
 
 
 
+    $('.open-button').on('click', function(){
+        $(this).siblings('.list__text--hide_text').toggleClass('hide')
+        $(this).siblings('.dots').toggleClass('hide')
+        $(this).toggleClass('active')
+    })
+
+
 })
