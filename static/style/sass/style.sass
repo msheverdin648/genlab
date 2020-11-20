@@ -243,6 +243,7 @@
             margin-bottom: 24px
         &_button
             justify-content: center
+
     &__column 
         display: flex
         flex-direction: column
@@ -277,6 +278,8 @@
         font-size: 15px
         +u_bold
         line-height: 22.2px
+        &:hover
+            cursor: pointer
 
 .link
     color: $pink
@@ -308,3 +311,19 @@
     &:hover
         cursor: pointer
     
+.open-button
+    display: block
+    &::after
+        content: "Читать далее"
+        display: block
+        color: #ffffff
+        font-size: 14px
+        +u_normal
+        border: 1px solid #FFFFFF
+        background: $pink
+        padding: 7px 22px
+    &.active
+        &::after
+            content: "Скрыть"
+    &:hover
+        cursor: pointer

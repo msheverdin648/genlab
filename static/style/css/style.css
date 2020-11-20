@@ -2039,6 +2039,10 @@
   line-height: 22.2px;
 }
 
+.form__button:hover {
+  cursor: pointer;
+}
+
 .link {
   color: #BB669B;
 }
@@ -2076,5 +2080,30 @@
 }
 
 .checkbox__label:hover {
+  cursor: pointer;
+}
+
+.open-button {
+  display: block;
+}
+
+.open-button::after {
+  content: "Читать далее";
+  display: block;
+  color: #ffffff;
+  font-size: 14px;
+  font-family: 'Ubuntu';
+  font-weight: 400;
+  font-style: normal;
+  border: 1px solid #FFFFFF;
+  background: #BB669B;
+  padding: 7px 22px;
+}
+
+.open-button.active::after {
+  content: "Скрыть";
+}
+
+.open-button:hover {
   cursor: pointer;
 }
