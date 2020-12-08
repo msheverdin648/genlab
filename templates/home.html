@@ -44,35 +44,7 @@
     </div>
     <!--Конец блока-->
 
-    <!--Блок с часто-задаваемыми вопрсами-->
-    <div class="questions">
-        <div class="container">
-            <h2 class="questions__header">Ответы на часто задаваемые вопросы</h2>
-            <ol class="questions__list list">
-                {% for a in questions  %}
-                <li class="questions__list__header list__item  list__item">
-                    <h3 class="list__item__question list__header">
-                        {{ a.question }}
-                        <span class="list__item__question__button list__navigate">Подробнее</span>
-                    </h3>
-                    <div class="list__item__answer list__item__content hide">
-                        <p class="list__item__answer_header">
-                            Ответ:
-                        </p>
-                        <p class="list__item__answer_text">
-                            {{ a.answer }}
-                        </p>
-                    </div>
-                </li>
-                {% endfor %}
-            </ol>
-            <div class="questions__row">
-                <a href="#" class="questions__row__button">Задать свой вопрос</a>
-                <a href="{% url 'questions' %}" class="questions__row__link">Читать другие ответы на вопросы</a>
-            </div>
-        </div>
-    </div>
-    <!--Конец блока-->
+    {% include "include/short-questions.html" %}
 
     {% include "include/steps.html" %}
     <!--Начало блока с новостями-->
@@ -89,9 +61,9 @@
                             <div class="slide__content__image ibg"><img src="{{a.img.url}}" alt=""></div>
                             <div class="slide__content__text">
                                 <h3 class="slide__content__text__header">{{a.title}}</h3>
-                                <p class="slide__content__text__description">{{a.text}}</p>
+                                <p class="slide__content__text__description">{{a.short_text}}</p>
                                 <div class="slide__content__text__more">
-                                    <a href="#" class="slide__content__text__more__button">Читать подробнее</a>
+                                    <a href="{% url 'news' %}#{{a.link}}" class="slide__content__text__more__button">Читать подробнее</a>
                                     <span class="slide__content__text__more__date">{{a.date}}</span>
                                 </div>
                             </div>
@@ -102,9 +74,9 @@
                             <div class="slide__content__image ibg"><img src="{{a.img.url}}" alt=""></div>
                             <div class="slide__content__text">
                                 <h3 class="slide__content__text__header">{{a.title}}</h3>
-                                <p class="slide__content__text__description">{{a.text}}</p>
+                                <p class="slide__content__text__description">{{a.short_text}}</p>
                                 <div class="slide__content__text__more">
-                                    <a href="#" class="slide__content__text__more__button">Читать подробнее</a>
+                                    <a href="{% url 'news' %}#{{a.link}}" class="slide__content__text__more__button">Читать подробнее</a>
                                     <span class="slide__content__text__more__date">{{a.date}}</span>
                                 </div>
                             </div>
@@ -121,7 +93,7 @@
                 </p>
             </div>
             <div class="news__button">
-                <a href="" class="news__button__link">Читать все публикации</a>
+                <a href="{% url 'news' %}" class="news__button__link">Читать все публикации</a>
             </div>
         </div>
     </div>

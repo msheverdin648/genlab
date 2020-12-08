@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+  <!--Блок с новостями-->
+    <div class="news">
+        <div class="container">
+            <div class="news__content">
+                
+                {% for item in news %}
+                    <div class="news__card news-card" id="{{item.link}}">
+                        <div class="news-card__photo ibg">
+                            <img src="{{item.img.url}}" alt="">
+                        </div>
+                        <div class="news-card__info">
+                            <h2 class="news-card__header">
+                                {{item.title}}
+                            </h2>
+                            <p class="news-card__text_short news-card__text">
+                                {{item.short_text}}
+                            </p>
+                            <p class="news-card__text_full news-card__text">
+                                {{item.full_text}}
+                            </p>
+                            <div class="news-card__navigation">
+                                <button class="news-card__view">Читать подробнее</button>
+                                <span class="news-card__date news-card__text">{{item.date}}</span>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+  <!--Конец блока-->
+
+
+  {% include "include/feedback.html" %}
+  {% include "include/short-questions.html" %}
+{% endblock content %}

@@ -1,0 +1,81 @@
+
+
+.news 
+	&__content 
+	&__card 
+
+.news-card 
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: center
+	position: relative	
+	&__photo 
+		width: 100%
+		height: 393.71px
+		position: relative
+		z-index: 9
+	&__info 
+		position: relative
+		max-width: 980px
+		padding: 33px 62px 12px 62px
+		box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05);
+		transform: translateY(-10%)
+		background: #fff
+		z-index: 10
+	&__header 
+		+vol_bold
+		line-height: 22.4px
+		font-size: 16px
+		color: #252525
+
+	&__text
+		+u_normal
+		font-size: 14px
+		line-height: 19.6px
+		color: #848484
+		&_short 
+			margin: 60px 0 120px 0
+		&_full 
+			margin: 0 0 70px 0
+	&__navigation 
+		display: flex
+		justify-content: space-around
+	&__view 
+		display: block
+		position: relative
+		background: #fff
+		color: $pink
+		+u_medium
+		font-size: 14px
+		line-height: 16.49px
+		padding-right: 20px
+		&::before
+			content: ""
+			display: block
+			position: absolute
+			top: 0
+			right: 0
+			width: 12px
+			height: 15px
+			background: url("../../img/arrow-down.svg") center no-repeat
+			background-size: contain
+			transform: translateY(20%)
+			
+	&__date 
+		display: block
+		font-size: 13px
+		position: relative
+		padding-left: 45px
+		&::before
+			content: ""
+			display: block
+			position: absolute
+			top: 0
+			left: 0
+			width: 30px
+			height: 30px
+			background: url('../../img/calendar.svg') center no-repeat
+			background-size: cover
+			transform: translateY(-25%)
+			

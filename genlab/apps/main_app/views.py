@@ -141,6 +141,21 @@ class FeedbackView(View):
         )
         message.save()
         return HttpResponseRedirect('/cooperations/')
+
+
+class NewsView(View):
+
+    def get(self, request, *args, **kwargs):
+
+        news = News.objects.all()
+        slides = HeaderSlid.objects.filter(page='home')
+        questions = QuestionsAnswers.objects.filter(show_home=True)
+        context = {
+            'news': news,
+            'slides': slides,
+            'questions': questions,
+        }
+        return render(request, "news.html", context)
     
 
         

@@ -1,0 +1,31 @@
+{% load static  %}
+
+<!--Блок с часто-задаваемыми вопрсами-->
+<div class="questions">
+    <div class="container">
+        <h2 class="questions__header">Ответы на часто задаваемые вопросы</h2>
+        <ol class="questions__list list">
+            {% for a in questions  %}
+            <li class="questions__list__header list__item  list__item">
+                <h3 class="list__item__question list__header">
+                    {{ a.question }}
+                    <span class="list__item__question__button list__navigate">Подробнее</span>
+                </h3>
+                <div class="list__item__answer list__item__content hide">
+                    <p class="list__item__answer_header">
+                        Ответ:
+                    </p>
+                    <p class="list__item__answer_text">
+                        {{ a.answer }}
+                    </p>
+                </div>
+            </li>
+            {% endfor %}
+        </ol>
+        <div class="questions__row">
+            <a href="#" class="questions__row__button">Задать свой вопрос</a>
+            <a href="{% url 'questions' %}" class="questions__row__link">Читать другие ответы на вопросы</a>
+        </div>
+    </div>
+</div>
+<!--Конец блока-->

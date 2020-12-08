@@ -88,12 +88,14 @@ class HeaderSlid(models.Model):
     RESEARCHES = 'researches'
     QUESTIONS = 'questions'
     COOPERATION = 'cooperation'
+    NEWS = 'news'
 
     CHOICE_GROUP = {
         (HOME, 'Главная страница'),
         (RESEARCHES, 'Исследования'),
         (QUESTIONS, 'Как сдать анализы'),
         (COOPERATION, 'Сотрудничество'),
+        ( NEWS, 'news'),
     } 
 
     slide_header = models.CharField(("Заголовок слайда"), max_length=500)
@@ -160,10 +162,11 @@ class News(models.Model):
         verbose_name_plural = 'Новости'
 
     title = models.CharField(("Заголовок новости"), max_length=256)
-    text = models.TextField(("Текст новости"))
+    short_text = models.TextField(("Короткий текст новости"))
+    full_text = models.TextField(("Полный текст новости(короткий писать не надо)"))
     img = models.ImageField(("Картинка новости"), upload_to='img')
     date = models.DateField(("Дата новости"), auto_now=False, auto_now_add=False)
-    link = models.CharField(("Ссылка на новость"), max_length=256)
+    link = models.SlugField(("Cсылка на новость"))
 
     def __str__(self):
         return self.title
