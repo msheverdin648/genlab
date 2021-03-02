@@ -1,6 +1,10 @@
 $(document).ready(function(){
 
 
+
+    
+
+
     //Настройка блока с Основными исследования
     $('.researches__items__item')
     .mouseenter( function(){
@@ -11,7 +15,12 @@ $(document).ready(function(){
         $(this).removeClass('active')
     })
 
-
+    //Настройка меню бургера
+        $('.menu_burger__button').on('click', function(){
+            $(this).toggleClass('active')
+            $('.sidebar__column').toggleClass('active')
+            $('body').toggleClass('_lock')
+        })
 
 
     //Настройка сайдбара
@@ -43,6 +52,14 @@ $(document).ready(function(){
         nextArrow: '<button class="slick-next slick-arrow" aria-label="Next" type="button" style="">Следующий слайд</button>',
         prevArrow: false,
         dots: true,
+        responsive: [
+            {
+              breakpoint: 641,
+              settings: {
+                arrows: false
+              }
+            }
+          ],
 
     })
 
@@ -60,6 +77,17 @@ $(document).ready(function(){
         nextArrow: '<button class="slick-next slick-arrow" aria-label="Next" type="button" style="">Следующий слайд</button>',
         prevArrow: '<button class="slick-prev slick-arrow" aria-label="Prev" type="button" style="">Предыдущий слайд</button>',
         dots: true,
+        responsive: [
+            {
+              breakpoint: 641,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                nextArrow: '<button class="slick-next slick-arrow" aria-label="Next" type="button" style=""></button>',
+                prevArrow: '<button class="slick-prev slick-arrow" aria-label="Prev" type="button" style=""></button>',
+              }
+            }
+          ],
     })
 
 

@@ -1,2 +1,10 @@
 {
+    "liveSassCompile.settings.formats": [
+
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "genlab/apps/main_app/static/style/css"
+        }
+    ]
 }

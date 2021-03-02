@@ -1,11 +1,17 @@
 {% load static %}
 
-
-<div class="sidebsar__column">
+<div class="menu_burger _mob">
+    <img src="{% static 'img/logo_mob.svg' %}" alt="" class="menu_burger__logo">
+    <div class="menu_burger__button">
+        <span></span>
+        <span></span>
+    </div>
+</div>
+<div class="sidebar__column ">
     <div class="sidebar">
-        <span class="sidebar__open"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+        <span class="sidebar__open _pc"><i class="fa fa-angle-right " aria-hidden="true"></i></span>
         <div class="sidebar__container">
-            <div class="sidebar__logo"><img src="{% static 'img/sidebar-logo.svg' %}" alt=""></div>
+            <div class="sidebar__logo _pc"><img src="{% static 'img/sidebar-logo.svg' %}" alt=""></div>
             <ul class="sidebar__nav">
                 {% url 'home' as url_home %}
                 <li class="sidebar__nav__item {% if url_home == request.path %} active {% endif %}">

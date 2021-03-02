@@ -1,14 +1,7 @@
 
 @import 'color'
 @import 'mixins'
-@import 'header-slider'
-@import 'home'
-@import 'researches'
-@import 'cooperation'
-@import 'research-method'
-@import 'sidebar'
-@import 'footer'
-@import 'news'
+@import 'fonts'
 
 .wrapper
     display: flex
@@ -22,7 +15,8 @@
 .hide
     display: none
 
-
+._pc 
+    display: block
 
 .ibg
     background-position: center
@@ -328,3 +322,104 @@
             content: "Скрыть"
     &:hover
         cursor: pointer
+
+._lock
+    overflow: hidden  
+
+
+
+
+
+@media screen and ( min-width: 320px ) and (max-width: 1160px)
+    .wrapper
+        flex-direction: column 
+
+    .container
+        width: 90.625%
+    
+    
+
+    .list
+        &__item 
+            &__question 
+                padding-left: 17px
+                font-size: 14px
+                line-height: 115%
+                margin-bottom: 15px
+                &::before
+                    display: none
+                &__button 
+                    width: 30px
+                    margin: 0 0 0 0px
+                    padding: 0
+            &__answer 
+                padding-left: 17px
+                &_header 
+                    font-size: 14px
+                    line-height: 140.8%
+                &_text 
+                    font-size: 12px
+                    line-height: 140.8%
+                &__content 
+                
+        &__header 
+            padding-left: 17px
+            &::before
+                display: none
+            
+        &__navigate 
+            color: transparent
+            margin: 0
+            padding: 0
+            width: 30px
+            &.active
+                color: transparent
+
+
+
+    .sublist
+        &__item 
+            padding: 30px 19px 30px 19px
+            margin: 0
+            &.active
+                .sublist__title
+                    
+        &__title
+            flex-direction: column
+            &::before
+                display: none
+        &__navigate
+            margin-left: 0
+            margin-top: 10px
+            text-align: center
+            &::after
+            &.active
+                &::after
+            &:hover
+
+
+
+
+
+    ._mob
+        display: block
+
+    
+    
+._mob 
+        display: none
+
+@import 'sidebar'
+@import 'header-slider'
+@import 'home'
+@import 'researches'
+@import 'cooperation'
+@import 'research-method'
+@import 'footer'
+@import 'news'
+
+@media screen and ( min-width: 320px ) and (max-width: 1160px)
+    ._pc
+            display: none
+
+    

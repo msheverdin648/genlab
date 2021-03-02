@@ -25,15 +25,17 @@
                         <ul class="sub-sub__list hide">
                             {% for c in b.methods.all %}
                             <li class="sub-sub__list__item">
-                                <a href="#">
+                                <a href="">
                                     <p class="sub-sub__list__item__name">{{c.name}}</p>
-                                    <p class="sub-sub__list__item__days">до {{c.period}} 
-                                    {% if c.period == 1 %}
-                                        дня
-                                    {% else %}
-                                        дней    
-                                    {% endif %} </p>
-                                    <p class="sub-sub__list__item__price">{{c.price}} руб</p>
+                                    <div class="sub-sub__list__item__block">
+                                        <p class="sub-sub__list__item__days">до {{c.period}} 
+                                            {% if c.period == 1 %}
+                                                дня
+                                            {% else %}
+                                                дней    
+                                            {% endif %} </p>
+                                        <p class="sub-sub__list__item__price">{{c.price}} руб</p>
+                                    </div>
                                 </a>
                             </li>
                             {% endfor %}
