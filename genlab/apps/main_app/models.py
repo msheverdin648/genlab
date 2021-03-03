@@ -89,13 +89,15 @@ class HeaderSlid(models.Model):
     QUESTIONS = 'questions'
     COOPERATION = 'cooperation'
     NEWS = 'news'
+    ABOUT = 'about'
 
     CHOICE_GROUP = {
         (HOME, 'Главная страница'),
         (RESEARCHES, 'Исследования'),
         (QUESTIONS, 'Как сдать анализы'),
         (COOPERATION, 'Сотрудничество'),
-        ( NEWS, 'news'),
+        ( NEWS, 'Новости'),
+        (ABOUT, 'О нас')
     } 
 
     slide_header = models.CharField(("Заголовок слайда"), max_length=500)

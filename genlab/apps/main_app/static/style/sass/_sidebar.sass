@@ -46,7 +46,9 @@
                         color: #000000
                         border: none
                         padding: 0
+                        margin: 0 auto
                         margin-top: 72px
+                        transform: translateX(-50%)
             &__contacts
                 position: relative
                 top: 15px
@@ -124,9 +126,10 @@
         &__input
             margin-bottom: 26px
             position: relative
+            display: flex
             &__item
                 border: 1px solid #E0E0E0
-                padding: 13px 70px 12px 15px
+                padding: 13px 10px 12px 15px
             &__button
                 background: $pink
                 color: #ffffff
@@ -165,8 +168,13 @@
         display: flex
         justify-content: space-between
         align-items: center
-        height: 45px
         padding: 11px 15px 0px 15px
+        background: #fff
+        position: fixed
+        top: 0
+        left: 0
+        width: 100%
+        z-index: 10
         background: #fff
         &__logo 
         &__button
@@ -236,10 +244,11 @@
     .sidebar
         padding-top: 10px
         box-shadow: none
-        width: 100%
+        max-width: 100%
         margin: 0
 
         &__column
+            width: 100%
             transform: translateY(-120%)
             position: fixed
             background: #fff
@@ -251,6 +260,7 @@
             &.active
                 transform: translateY(0)
                 opacity: 1
+                overflow-y: scroll
 
         &__nav
             &__item

@@ -159,5 +159,17 @@ class NewsView(View):
     
 
         
+class AboutUsView(View):
 
+    def get(self, request, *args, **kwargs):
+
+        slides = HeaderSlid.objects.filter(page='about')
+        cards = About.objects.all()
+        news = News.objects.all()
+        context = {
+            'news': news,
+            'cards': cards,
+            'slides' : slides,
+        }
+        return render(request, "about_us.html", context)
 

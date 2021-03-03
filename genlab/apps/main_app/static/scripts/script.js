@@ -69,7 +69,6 @@ $(document).ready(function(){
         $("#slider-nav-1 .num__this").text( '0'+ (currentSlide+1));
     })
 
-
     $('.news__slider').slick({
         slidesToShow: 2,
         slidesToScroll: 2,
@@ -98,6 +97,26 @@ $(document).ready(function(){
 
     });
 
+    $('.news__slider_2').slick({
+        
+        dots: true,    
+        arrows: true,          
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        appendArrows: $('.news__navigate'),
+        nextArrow: '<button class="slick-next slick-arrow" aria-label="Next" type="button" style="">Следующий слайд</button>',
+        prevArrow: '<button class="slick-prev slick-arrow" aria-label="Prev" type="button" style="">Предыдущий слайд</button>',
+
+    })
+
+
+    $("#slider-nav-4 .num__all").text("0" + $("#slider-4 ul li").length)
+
+    $(".news__slider").on("afterChange", function(event, slick, currentSlide, nextSlide){
+        $("#slider-nav-4 .num__this").text('0' +( $('li.slick-active').text() - '10'));
+
+    });
+
 
     $('.partners__slider').slick({
         slidesToShow: 4,
@@ -106,6 +125,17 @@ $(document).ready(function(){
         nextArrow: '<button class="slick-next slick-arrow" aria-label="Next" type="button" style="">Следующий слайд</button>',
         prevArrow: '<button class="slick-prev slick-arrow" aria-label="Prev" type="button" style="">Предыдущий слайд</button>',
         dots: true,
+        responsive: [
+            {
+              breakpoint: 641,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                nextArrow: '<button class="slick-next slick-arrow" aria-label="Next" type="button" style=""></button>',
+                prevArrow: '<button class="slick-prev slick-arrow" aria-label="Prev" type="button" style=""></button>',
+              }
+            }
+          ],
         
     })
 

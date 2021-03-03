@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+	 <!--Блок подробнее о нас-->
+    <div class="about">
+        <div class="container">
+            <h2 class="about__header">
+                Подробнее о нас
+            </h2>
+            {% for card in cards  %}
+            <div class="about__card card">
+                <div class="card__header">
+                    {% if card.ico %}
+                        <img src="{{ card.ico.url }}" alt="" class="card__ico">
+                    {% endif %}
+                    <h3 class="card__title">{{card.name}}</h3>
+                </div>
+                <p class="card__text short">{{card.short_text}}</p>
+                <p class="card__text full hide">
+                    {{card.full_text}}
+                </p>
+                <p class="card__navigate"></p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <!--Конец блока-->
+
+
+	{% include "include/feedback.html" %}
+	{% include "include/short_news.html" %}		
+{% endblock %}

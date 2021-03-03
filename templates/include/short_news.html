@@ -1,0 +1,53 @@
+{% load static %}
+
+<!--Начало блока с новостями-->
+    <div class="news">
+        <div class="container">
+            <h2 class="news__header">
+                Новости нашей лаборатории
+            </h2>
+            <!--Слайдер-->
+            <div class="news__slider slider" id="slider-2">
+                {% for a in news  %}
+                    <div class="slider__item slide">
+                        <div class="slide__content">
+                            <div class="slide__content__image ibg"><img src="{{a.img.url}}" alt=""></div>
+                            <div class="slide__content__text">
+                                <h3 class="slide__content__text__header">{{a.title}}</h3>
+                                <p class="slide__content__text__description">{{a.short_text}}</p>
+                                <div class="slide__content__text__more">
+                                    <a href="{% url 'news' %}#{{a.link}}" class="slide__content__text__more__button">Читать подробнее</a>
+                                    <span class="slide__content__text__more__date">{{a.date}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__item slide">
+                        <div class="slide__content">
+                            <div class="slide__content__image ibg"><img src="{{a.img.url}}" alt=""></div>
+                            <div class="slide__content__text">
+                                <h3 class="slide__content__text__header">{{a.title}}</h3>
+                                <p class="slide__content__text__description">{{a.short_text}}</p>
+                                <div class="slide__content__text__more">
+                                    <a href="{% url 'news' %}#{{a.link}}" class="slide__content__text__more__button">Читать подробнее</a>
+                                    <span class="slide__content__text__more__date">{{a.date}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <!--Конец слайдера-->
+            <div class="news__navigate">
+                <p class="num" id="slider-nav-2">
+                    <span class="num__this">01</span>
+                    /
+                    <span class="num__all">03</span>
+                </p>
+            </div>
+            <div class="news__button">
+                <a href="{% url 'news' %}" class="news__button__link">Читать все публикации</a>
+            </div>
+        </div>
+    </div>
+    <!--Конец блока-->

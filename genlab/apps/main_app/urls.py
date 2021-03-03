@@ -13,7 +13,7 @@ urlpatterns = [
     path('search/', views.SerachType.as_view(), name='search-type' ),
     path('feedback/', views.FeedbackView.as_view(), name='feedback' ),
     path('news/', views.NewsView.as_view(), name='news' ),
-
+    path('about/', views.AboutUsView.as_view(), name='about' ),
 
     path('NotFound/', views.SorryView.as_view(), name='sorry' ),
 
