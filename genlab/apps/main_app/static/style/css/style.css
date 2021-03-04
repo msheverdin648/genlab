@@ -386,6 +386,8 @@
       width: 30px;
       margin: 0 0 0 0px;
       padding: 0; }
+  .list__item__block {
+    padding-left: 20px; }
   .list__item__answer {
     padding-left: 17px; }
     .list__item__answer_header {
@@ -1733,6 +1735,13 @@
     font-style: normal; }
     .research-method__application:visited, .research-method__application:active, .research-method__application:hover {
       color: #ffffff; }
+
+@media screen and (min-width: 320px) and (max-width: 1160px) {
+  .research-method__view {
+    display: flex;
+    flex-direction: column; }
+  .research-method__application {
+    margin-top: 15px; } }
 
 .footer {
   padding: 41px 0 31px 0;
