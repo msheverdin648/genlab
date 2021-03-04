@@ -24,8 +24,9 @@
                 <li class="sidebar__nav__item {% if url_questions == request.path %} active {% endif %}">  
                     <a href="{{url_questions}}"><i class="fas fa-flask"></i><span class="sidebar__nav__item__text">Как сдать анализы</span></a></li>
                 {% url 'sorry' as url_sorry %}  
+                {% url 'about' as url_about %}  
                 <li class="sidebar__nav__item  ">
-                    <a href="{{url_sorry}}"><i class="fa fa-info-circle" aria-hidden="true"></i><span class="sidebar__nav__item__text">О нас</span></a></li>
+                    <a href="{{url_about}}"><i class="fa fa-info-circle" aria-hidden="true"></i><span class="sidebar__nav__item__text">О нас</span></a></li>
                 {% url 'cooperation' as url_cooperation %}
                 <li class="sidebar__nav__item {% if url_cooperation == request.path %} active {% endif %}">
                     <a href="{{url_cooperation}}"><i class="fa fa-handshake-o" aria-hidden="false"></i><span class="sidebar__nav__item__text">Сотрудничество</span></a></li>

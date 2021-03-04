@@ -1,5 +1,5 @@
 {% load static %}
-
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,11 +14,71 @@
 <body>
     
     <div class="wrapper">
+
+       
+
         {% include "include/sidebar.html" %}
         <div class="content">
+               
+              <form action="" method="POST">
+
+                {% csrf_token %}
+
+            <div class="popup" id="popup-1">
+                <div class="popup__body">
+                    <div class="popup__content">
+                        <a href="" class="popup__close close-popup"><i class="popup__close_ico far fa-times-circle"></i></a>
+                        <div class="popup__title"><h2>Задайте свой вопрос</h2></div>
+                        <div class="popup__input__block">
+                            <label for="name" class="popup__lable">Ваше имя</label>
+                            <input name="name" id="name"  placeholder="Иванов Иван Иванович" class="popup__input" required>
+                        </div>
+                        <div class="popup__input__block">
+                            <label for="phone" class="popup__lable">Оставьте ваш номер телефона, чтобы мы могли связаться с вами</label>
+                            <input name="phone" id="phone"  placeholder="+998(___)-__-__" class="popup__input" required> 
+                        </div>
+                        <div class="popup__input__block">
+                            <textarea name="communication" id="" cols="30" rows="10" placeholder="Введите ваш вопрос" class="popup__textarea" required></textarea>
+                        </div>
+                        <div class="popup__input__block">
+                           <input type="submit" value="Отправить сообщение" class="popup__button">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="popup" id="popup-2">
+                <div class="popup__body">
+                    <div class="popup__content">
+                        <a href="" class="popup__close close-popup"><i class="popup__close_ico far fa-times-circle"></i></a>
+                        <div class="popup__title"><h2>Заявка на анализ.</h2></div>
+                        <div class="popup__input__block">
+                            <label for="name" class="popup__lable">Ваше Ф.И.О.</label>
+                            <input name="name" id="name"  placeholder="Иванов Иван Иванович" class="popup__input" required>
+                        </div>
+                        <div class="popup__input__block">
+                            <label for="phone" class="popup__lable">Оставьте ваш номер телефона, чтобы мы могли связаться с вами</label>
+                            <input name="phone" id="phone"  placeholder="+998(___)-__-__" class="popup__input" required> 
+                        </div>
+                        <div class="popup__input__block">
+                            <label for="research" class="popup__lable">Название интересуемого исследования:</label>
+                            <input name="research" id="research"  placeholder="ПГТ хромосомных анеуплодий" class="popup__input" required>
+                        </div>
+                        <div class="popup__input__block">
+                            <textarea name="communication" id="" cols="30" rows="10" placeholder="Введите ваше сообщение" class="popup__textarea" required></textarea>
+                        </div>
+                        <div class="popup__input__block">
+                           <input type="submit" value="Отправить сообщение" class="popup__button">
+                        </div>
+                    </div>
+                </div>
+            </div>
             {% include "include/header-slider.html" %}
             {% block content %}
-              
+
+         </form>
+
+
             {% endblock content %}
             {% include "include/footer.html" %}
         </div>
@@ -29,6 +89,7 @@
     <script src="{% static 'scripts/ibg.js' %}"></script>
     <script src="{% static 'scripts/slick.min.js' %}"></script>
     <script src="{% static 'scripts/search.js' %}"></script>
+    <script src="{% static 'scripts/popup.js' %}"></script>
     <script src="{% static 'scripts/script.js' %}"></script>
     
 </body>
