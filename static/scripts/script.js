@@ -106,6 +106,17 @@ $(document).ready(function(){
         appendArrows: $('.news__navigate'),
         nextArrow: '<button class="slick-next slick-arrow" aria-label="Next" type="button" style="">Следующий слайд</button>',
         prevArrow: '<button class="slick-prev slick-arrow" aria-label="Prev" type="button" style="">Предыдущий слайд</button>',
+        responsive: [
+            {
+              breakpoint: 641,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                nextArrow: '<button class="slick-next slick-arrow" aria-label="Next" type="button" style=""></button>',
+                prevArrow: '<button class="slick-prev slick-arrow" aria-label="Prev" type="button" style=""></button>',
+              }
+            }
+          ],
 
     })
 
@@ -221,5 +232,17 @@ $(document).ready(function(){
         $(this).toggleClass('active')
     })
 
+    $(".news-card__view").on('click', function(){
 
+            if ($(this).parent().siblings('.news-card__text_full').hasClass('active')) {
+                $(this).parent().siblings('.news-card__text_full').slideUp()
+                $(this).parent().siblings('.news-card__text_full').removeClass('active')
+                $(this).removeClass('active')
+            }else if(!($(this).parent().siblings('.news-card__text_full').hasClass('active'))){
+                $(this).parent().siblings('.news-card__text_full').slideDown()
+                $(this).parent().siblings('.news-card__text_full').addClass('active')
+                $(this).addClass('active')
+            }
+
+    })
 })
