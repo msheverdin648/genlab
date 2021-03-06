@@ -222,3 +222,13 @@ class ResearchApplication(models.Model):
     research = models.CharField(("Исследование"), max_length=255)
     text = models.TextField(("Текст вопроса"))
 
+class Subscriptions(models.Model):
+
+    class Meta:
+        verbose_name = ("Почта для рассылки")
+        verbose_name_plural = ("Почты для рассылки")
+
+    def __str__(self):
+        return f'email: {self.email}'
+
+    email = models.EmailField(("Почта пользователя"), max_length=254)

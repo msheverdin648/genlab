@@ -18,6 +18,8 @@ urlpatterns = [
     path('feedback/', views.FeedbackView.as_view(), name='feedback' ), 
     path('research-application/', views.ResearchApplicationView.as_view(), name='research-application' ),
     path('users-questions/', views.UsersQuestionsView.as_view(), name='users-questions' ),
+    path('subscriptions/', views.SubscriptionsView.as_view(), name='subscriptions' ),
+    
 
     path('NotFound/', views.SorryView.as_view(), name='sorry' ),
 

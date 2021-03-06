@@ -5,10 +5,13 @@
         <div class="footer__row row">
             <div class="row__column">
                 <h3 class="row__column__title">Оставьте email, чтобы быть в курсе последних новостей и событий компании:</h3>
-                <div class="row__column__send send">
-                    <input type="text" class="send__input" placeholder="example@mail.com">
+                <form action=" {% url 'subscriptions' %} " method="POST">
+                    <div class="row__column__send send">
+                        {% csrf_token %}
+                    <input type="email" name="email" class="send__input" placeholder="example@mail.com" required="">
                     <button class="send__button"><img src="{% static 'img/plane.svg' %}" alt=""></button>
                 </div>
+                </form>
             </div>
             <div class="row__column">
                 <h3 class="row__column__title">Мы в соц.сетях:</h3>

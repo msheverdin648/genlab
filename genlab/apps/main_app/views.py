@@ -16,7 +16,8 @@ from .models import (
     News,
     Feedback,
     ResearchApplication,
-    UsersQuestions
+    UsersQuestions,
+    Subscriptions
     )
 
 
@@ -196,4 +197,16 @@ class UsersQuestionsView(View):
             name=author, text=text, phone=user_phone
         )
         user_question.save()
+        return HttpResponseRedirect('/')
+
+
+class SubscriptionsView(View):
+
+    def post(self, request, *args, **kwargs):
+        email = request.POST.get('email')
+
+        message = Subscriptions.objects.create(
+            email = email
+        )
+        message.save()
         return HttpResponseRedirect('/')

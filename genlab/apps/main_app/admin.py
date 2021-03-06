@@ -11,7 +11,8 @@ from .models import (
     News,
     Feedback,
     UsersQuestions,
-    ResearchApplication
+    ResearchApplication,
+    Subscriptions
     )
 
 
@@ -28,3 +29,4 @@ admin.site.register(News)
 admin.site.register(Feedback)
 admin.site.register(UsersQuestions)
 admin.site.register(ResearchApplication)
+admin.site.register(Subscriptions)
