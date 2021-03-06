@@ -1023,6 +1023,8 @@
       font-family: 'Ubuntu';
       font-weight: 700;
       font-style: normal; }
+  .search__row {
+    display: flex; }
   .search__description {
     font-size: 12px;
     font-family: 'Ubuntu';
@@ -1516,6 +1518,8 @@
     width: 100%; }
   .search__description {
     text-align: center; }
+  .search__row {
+    flex-direction: column; }
   .researches__header {
     text-align: center;
     max-width: 100%;

@@ -15,6 +15,8 @@ from .models import (
     Partners,
     News,
     Feedback,
+    ResearchApplication,
+    UsersQuestions
     )
 
 
@@ -95,14 +97,6 @@ class CooperationView(View):
         }
         return render(request, 'cooperation.html', context)
 
-'''
-class Serach(ListView):
-
-    def get(self, request):
-        q = request.GET.get('q')
-        types = ResearchType.objects.filter(name__icontains = q).distinct().values('name')
-        a = list(types)
-        return JsonResponse({'types': a}, safe=False)'''
 
 
 class Serach(View):
@@ -130,17 +124,6 @@ class SerachType(View):
 
         return render(request, 'research-type.html', context)
 
-class FeedbackView(View):
-
-    def post(self, request, *args, **kwargs):
-        email = request.POST.get('email')
-        user_phone = request.POST.get('phone')
-        author = request.POST.get('name')
-        message = Feedback.objects.create(
-            name=author, email=email, phone=user_phone
-        )
-        message.save()
-        return HttpResponseRedirect('/cooperations/')
 
 
 class NewsView(View):
@@ -173,3 +156,44 @@ class AboutUsView(View):
         }
         return render(request, "about_us.html", context)
 
+
+
+class FeedbackView(View):
+
+    def post(self, request, *args, **kwargs):
+        email = request.POST.get('email')
+        user_phone = request.POST.get('phone')
+        author = request.POST.get('name')
+        feedback = Feedback.objects.create(
+            name=author, email=email, phone=user_phone
+        )
+        feedback.save()
+        return HttpResponseRedirect('/')
+
+
+
+class ResearchApplicationView(View):
+
+    def post(self, request, *args, **kwargs):
+        text = request.POST.get('text')
+        user_phone = request.POST.get('phone')
+        author = request.POST.get('name')
+        research = request.POST.get('research')
+        research_application = ResearchApplication.objects.create(
+            name=author, text=text, phone=user_phone, research=research
+        )
+        research_application.save()
+        return HttpResponseRedirect('/')
+
+class UsersQuestionsView(View):
+
+    def post(self, request, *args, **kwargs):
+        text = request.POST.get('text')
+        user_phone = request.POST.get('phone')
+        author = request.POST.get('name')
+
+        user_question = UsersQuestions.objects.create(
+            name=author, text=text, phone=user_phone
+        )
+        user_question.save()
+        return HttpResponseRedirect('/')

@@ -1,11 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
-
-
 {% block content %}
-  
-
-
+    
     <div class="search">
         <div class="container">
             <h2 class="search__header">Интересует конкретная услуга?</h2>
@@ -13,7 +9,7 @@
             <form method="GET" class="search__item" data-url="{% url 'search' %}" id="search" action="{% url 'search-type' %}">
                 <input type="text" placeholder="Поиск исследования" class="search__item__input" name="q" autocomplete="off">
                 <button class="search__item__button" type="submit">
-                    Найти исследование
+                Найти исследование
                 </button>
                 <ul class="search__list ">
                 </ul>
@@ -21,31 +17,26 @@
             <p class="search__description">Например: ПГТ хромосомных анеуплоидий</p>
         </div>
     </div>
-
     <!--Блок с исследованиями-->
-
     <div class="researches">
         <div class="container">
             <h2 class="researches__header">Основные направления исследований лаборатории</h2>
             <div class="researches__items">
-               {% for a in main_researches %}
-                <div class="researches__items__item research">
-                    <h3 class="research__header">{{a.name}}</h3>
-                    {% for b in a.types.all %}
-                        <hr class="research__underline">
+                {% for a in main_researches %}
+                    <div class="researches__items__item research">
+                        <h3 class="research__header">{{a.name}}</h3>
+                        {% for b in a.types.all %}
+                            <hr class="research__underline">
                             <a href="{% url 'research-type' slug=b.slug %}" class="research__name">{{b.name}}</a>
-                        <hr class="research__underline">
-                    {% endfor %}
-
-                </div>
-               {% endfor %}
+                            <hr class="research__underline">
+                        {% endfor %}
+                    </div>
+                {% endfor %}
             </div>
         </div>
     </div>
     <!--Конец блока-->
-
     {% include "include/short-questions.html" %}
-
     {% include "include/steps.html" %}
     {% include "include/short_news.html" %}
 {% endblock %}

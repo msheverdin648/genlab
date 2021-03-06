@@ -11,9 +11,13 @@ urlpatterns = [
     path('cooperations/', views.CooperationView.as_view(), name='cooperation' ),
     path('search.json/', views.Serach.as_view(), name='search' ),
     path('search/', views.SerachType.as_view(), name='search-type' ),
-    path('feedback/', views.FeedbackView.as_view(), name='feedback' ),
     path('news/', views.NewsView.as_view(), name='news' ),
     path('about/', views.AboutUsView.as_view(), name='about' ),
+
+
+    path('feedback/', views.FeedbackView.as_view(), name='feedback' ), 
+    path('research-application/', views.ResearchApplicationView.as_view(), name='research-application' ),
+    path('users-questions/', views.UsersQuestionsView.as_view(), name='users-questions' ),
 
     path('NotFound/', views.SorryView.as_view(), name='sorry' ),
 

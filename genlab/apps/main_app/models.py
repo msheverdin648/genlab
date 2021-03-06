@@ -190,3 +190,35 @@ class Feedback(models.Model):
     email = models.EmailField(("Почта пользователя"), max_length=254)
 
 
+class UsersQuestions(models.Model):
+
+    
+
+    class Meta:
+        verbose_name = ("Вопрос пользователя")
+        verbose_name_plural = ("Вопросы пользователей")
+
+    def __str__(self):
+        return f'ФИО: {self.name}, телефон: {self.phone}'
+
+    name = models.CharField(("ФИО пользователя"), max_length=150)
+    phone = models.CharField(("Номер телефона"),  max_length=150)
+    text = models.TextField(("Текст вопроса"))
+
+
+class ResearchApplication(models.Model):
+
+    
+
+    class Meta:
+        verbose_name = ("Заявка на исследование")
+        verbose_name_plural = ("Заявки на исследование")
+
+    def __str__(self):
+        return f'ФИО: {self.name}, телефон: {self.phone}, исследование: {self.research}'
+
+    name = models.CharField(("ФИО пользователя"), max_length=150)
+    phone = models.CharField(("Номер телефона"),  max_length=150)
+    research = models.CharField(("Исследование"), max_length=255)
+    text = models.TextField(("Текст вопроса"))
+

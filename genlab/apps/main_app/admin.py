@@ -10,6 +10,8 @@ from .models import (
     Partners,
     News,
     Feedback,
+    UsersQuestions,
+    ResearchApplication
     )
 
 
@@ -24,3 +26,5 @@ admin.site.register(About)
 admin.site.register(Partners)
 admin.site.register(News)
 admin.site.register(Feedback)
+admin.site.register(UsersQuestions)
+admin.site.register(ResearchApplication)
